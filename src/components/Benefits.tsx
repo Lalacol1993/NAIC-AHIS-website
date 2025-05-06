@@ -70,6 +70,7 @@ const Benefits = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Professional Clinical Network</h3>
               <p className="text-blue-100 mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum maximus mauris sed sodales.
+                </p>
               <ul className="space-y-3 text-white">
                 {['Verified spine specialists', 'Direct appointment booking', 'Shared diagnostic data', 'Integrated care planning'].map((item, index) => (
                   <li key={index} className="flex items-center">
