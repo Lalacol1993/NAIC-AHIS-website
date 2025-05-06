@@ -18,7 +18,6 @@ function App() {
         <Features />
         <HowItWorks />
         <Benefits />
-        <Testimonials />
         <PartnerClinics />
         <FAQ />
         <DownloadCTA />
