@@ -6,6 +6,7 @@ import HowItWorks from './components/HowItWorks';
 import Benefits from './components/Benefits';
 import PartnerClinics from './components/PartnerClinics';
 import FAQ from './components/FAQ';
+import Testimonials from './components/Testimonials';
 import DownloadCTA from './components/DownloadCTA';
 import Footer from './components/Footer';
 
