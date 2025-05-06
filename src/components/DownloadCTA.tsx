@@ -59,9 +59,6 @@ const DownloadCTA = () => {
                       alt="SpineScan App" 
                       className="w-full h-auto"
                     />
-                      <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center text-white">
-                        <MessageSquare size={18} />
-                      </div>
                     </div>
                   </div>
                 </div>
