@@ -21,7 +21,7 @@ const DownloadCTA = () => {
                 Start Your Spine Health Journey Today
               </h2>
               <p className="text-blue-100 text-lg mb-8">
-                Download SpineScan now and take the first step toward understanding and improving your spine health. Our AI-powered technology is ready to provide you with insights previously available only through clinical visits.
+                Download <appname> now and take the first step toward understanding and improving your spine health. Our AI-powered technology is ready to provide you with insights previously available only through clinical visits.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
