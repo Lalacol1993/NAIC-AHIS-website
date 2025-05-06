@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Benefits from './components/Benefits';
-import PartnerClinics from './components/PartnerClinics';
 import FAQ from './components/FAQ';
 import DownloadCTA from './components/DownloadCTA';
 import Footer from './components/Footer';
@@ -18,7 +17,6 @@ function App() {
         <Features />
         <HowItWorks />
         <Benefits />
-        <PartnerClinics />
         <FAQ />
         <DownloadCTA />
       </main>
