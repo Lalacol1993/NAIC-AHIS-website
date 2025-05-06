@@ -60,18 +60,6 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-blue-800 flex items-center justify-center text-white">
-                  <span className="font-bold">97%</span>
-                </div>
-                <div>
-                  <p className="font-medium text-slate-900">Detection Accuracy</p>
-                  <p className="text-sm text-slate-600">Clinically verified</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
