@@ -59,10 +59,6 @@ const DownloadCTA = () => {
                       alt="SpineScan App" 
                       className="w-full h-auto"
                     />
-                    <div className="flex justify-around mt-4 px-4">
-                      <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center text-white">
-                        <PhoneIcon size={18} />
-                      </div>
                       <div className="w-16 h-16 rounded-full bg-teal-600 -mt-10 border-4 border-white flex items-center justify-center text-white">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" />
