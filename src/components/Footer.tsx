@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-slate-800 text-slate-400 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {new Date().getFullYear()} SpineScan. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BlueJay². All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy</a>
             <a href="#" className="hover:text-white transition-colors">Terms</a>
