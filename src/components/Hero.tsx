@@ -30,24 +30,13 @@ const Hero = () => {
                 <ArrowRight size={18} />
               </button>
             </div>
-
-            <div className="mt-8 flex items-center gap-4">
-              <div className="flex -space-x-3">
-                <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="User" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="User" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="User" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-              </div>
-              <p className="text-slate-700">
-                <span className="font-semibold">50,000+</span> happy users and growing
-              </p>
-            </div>
           </div>
           
           <div className="w-full lg:w-1/2 relative">
             <div className="bg-gradient-to-br from-blue-800/20 to-teal-600/20 rounded-3xl p-3 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-md">
                 <img 
-                  src="https://images.pexels.com/photos/5473182/pexels-photo-5473182.jpeg" 
+                  src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Placeholder.png" 
                   alt="SpineScan App" 
                   className="w-full h-auto" 
                 />
