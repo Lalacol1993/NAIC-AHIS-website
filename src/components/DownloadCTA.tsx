@@ -52,7 +52,7 @@ const DownloadCTA = () => {
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-[3rem] p-3 shadow-2xl">
                   <div className="bg-white rounded-[2.5rem] overflow-hidden w-64 pb-4">
                     <img 
-                      src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/placeholder.png" 
+                      src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Placeholder.png" 
                       alt="SpineScan App" 
                       className="w-full h-auto"
                     />
