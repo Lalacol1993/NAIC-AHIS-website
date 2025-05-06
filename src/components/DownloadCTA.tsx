@@ -48,10 +48,6 @@ const DownloadCTA = () => {
                   <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="User" className="w-10 h-10 rounded-full border-2 border-blue-800" />
                   <img src="https://images.pexels.com/photos/4462782/pexels-photo-4462782.jpeg" alt="User" className="w-10 h-10 rounded-full border-2 border-blue-800" />
                 </div>
-                <div>
-                  <div className="font-bold text-white">50,000+ Downloads</div>
-                  <div className="text-sm">Join our growing community</div>
-                </div>
               </div>
             </div>
             
