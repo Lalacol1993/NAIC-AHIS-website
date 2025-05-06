@@ -72,16 +72,6 @@ const DownloadCTA = () => {
                   </div>
                 </div>
               </div>
-              
-              <div className="absolute right-16 bottom-16 bg-white rounded-lg shadow-lg p-3 transform rotate-12">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-green-500 flex items-center justify-center text-white">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
