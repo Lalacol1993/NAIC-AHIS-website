@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "What languages does the AI chatbot support?",
-    answer: "Currently, our AI chatbot supports English, Spanish, and French with both text and voice interaction. We're continuously working to add more languages to make spine health information accessible to people worldwide. Each language version is specially trained on medical terminology to ensure accuracy in health communications."
+    answer: "Currently, our AI chatbot supports English, Bahasa Melayu, and 中文 with both text and voice interaction. We're continuously working to add more languages to make spine health information accessible to people worldwide. Each language version is specially trained on medical terminology to ensure accuracy in health communications."
   },
   {
     question: "How often should I scan my spine?",
@@ -20,19 +20,11 @@ const faqs = [
   },
   {
     question: "Can children use SpineScan?",
-    answer: "SpineScan is primarily designed for adults and teenagers (13+). The app can be used for younger children, but should be administered by a parent or guardian. We've included special guidelines for scanning children's spines, as their proportions and anatomy differ from adults. Always consult with a pediatric specialist before making health decisions based on scan results for children."
-  },
-  {
-    question: "How does the clinic partnership program work?",
-    answer: "We've carefully vetted and partnered with spine specialists across the country who are experienced in addressing issues identified by SpineScan. When the app identifies concerns that would benefit from in-person care, you can easily book appointments with nearby partner clinics directly through the app. These partners have access to your SpineScan results (with your permission), allowing for more informed and efficient care."
-  },
-  {
-    question: "Is SpineScan covered by insurance?",
-    answer: "While the SpineScan app itself is not typically covered by insurance, many of our partner clinics accept major insurance plans for in-person treatments. Additionally, some flexible spending accounts (FSAs) and health savings accounts (HSAs) may reimburse the app purchase as a qualified medical expense. We recommend checking with your insurance provider for specific coverage details."
+    answer: "SpineScan is primarily designed for adults and teenagers (13+). The app can be used for younger children, but should be administered by a parent or guardian. We've included special guidelines for scanning children's spines, as their proportions and anatomy differ slightly from adults. Always consult with a pediatric specialist before making health decisions based on scan results for children."
   },
   {
     question: "What if I don't have anyone to help me take the scan?",
-    answer: "We've designed SpineScan with solo users in mind. The app includes a self-scanning mode with clear voice instructions and visual guides to help you position your phone correctly. Using the timer function or voice commands, you can trigger the scan without needing to touch the screen. We also provide accessories like phone stands (sold separately) that can make self-scanning even easier."
+    answer: "We've designed SpineScan with this in mind. The app includes a self-scanning mode with clear voice instructions and visual guides to help you position your phone correctly. Using the timer function or voice commands, you can trigger the scan without needing to touch the screen. We also provide accessories like phone stands (sold separately) that can make self-scanning even easier."
   }
 ];
 
@@ -49,7 +41,7 @@ const FAQ = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
           <p className="text-lg text-slate-700">
-            Find answers to common questions about SpineScan technology, functionality, and partnerships.
+            Find answers to common questions about SpineScan technology and functionality.
           </p>
         </div>
         
