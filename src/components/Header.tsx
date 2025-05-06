@@ -39,7 +39,6 @@ const Header = () => {
           <a href="#features" className="font-medium hover:text-primary-700 transition-colors">Features</a>
           <a href="#how-it-works" className="font-medium hover:text-primary-700 transition-colors">How It Works</a>
           <a href="#benefits" className="font-medium hover:text-primary-700 transition-colors">Benefits</a>
-          <a href="#clinics" className="font-medium hover:text-primary-700 transition-colors">Partner Clinics</a>
           <a href="#faq" className="font-medium hover:text-primary-700 transition-colors">FAQ</a>
           
           <div className="relative">
