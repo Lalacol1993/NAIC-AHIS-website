@@ -91,7 +91,6 @@ const Header = () => {
             <a href="#features" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>Features</a>
             <a href="#how-it-works" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>How It Works</a>
             <a href="#benefits" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>Benefits</a>
-            <a href="#clinics" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>Partner Clinics</a>
             <a href="#faq" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>FAQ</a>
             
             <div className="relative py-2">
