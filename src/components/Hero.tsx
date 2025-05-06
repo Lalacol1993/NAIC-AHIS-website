@@ -15,8 +15,8 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed">
-              Revolutionary AI technology scans your spine through your phone camera, 
-              identifies 33 critical points, and provides instant analysis for better health decisions.
+              Revolutionary AI technology scans your spine through your phones LIDAR sensor, 
+              generates 3d mesh, and provides instant analysis for better health decisions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
@@ -40,13 +40,6 @@ const Hero = () => {
                   alt="SpineScan App" 
                   className="w-full h-auto" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-6">
-                  <div className="inline-flex bg-teal-600/90 text-white text-sm font-medium px-3 py-1 rounded-full mb-2 max-w-max">
-                    AI Powered
-                  </div>
-                  <h3 className="text-white text-xl font-bold">Analyzing spinal alignment</h3>
-                  <p className="text-white/80 mt-1">33 points detected</p>
-                </div>
               </div>
             </div>
           </div>
