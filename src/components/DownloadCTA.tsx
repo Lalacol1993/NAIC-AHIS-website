@@ -43,11 +43,6 @@ const DownloadCTA = () => {
               </div>
               
               <div className="flex items-center gap-4 text-blue-100">
-                <div className="flex -space-x-3">
-                  <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" alt="User" className="w-10 h-10 rounded-full border-2 border-blue-800" />
-                  <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="User" className="w-10 h-10 rounded-full border-2 border-blue-800" />
-                  <img src="https://images.pexels.com/photos/4462782/pexels-photo-4462782.jpeg" alt="User" className="w-10 h-10 rounded-full border-2 border-blue-800" />
-                </div>
               </div>
             </div>
             
