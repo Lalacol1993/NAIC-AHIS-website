@@ -69,8 +69,7 @@ const Benefits = () => {
             <div className="p-8 md:p-12">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Professional Clinical Network</h3>
               <p className="text-blue-100 mb-6">
-                SpineScan bridges the gap between self-assessment and professional care. When needed, seamlessly transition to in-person treatment with our network of certified spine specialists.
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum maximus mauris sed sodales.
               <ul className="space-y-3 text-white">
                 {['Verified spine specialists', 'Direct appointment booking', 'Shared diagnostic data', 'Integrated care planning'].map((item, index) => (
                   <li key={index} className="flex items-center">
@@ -84,7 +83,7 @@ const Benefits = () => {
             </div>
             <div className="h-full">
               <img 
-                src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg" 
+                src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Placeholder.png" 
                 alt="Professional healthcare" 
                 className="w-full h-full object-cover"
               />
