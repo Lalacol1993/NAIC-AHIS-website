@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "What if I don't have anyone to help me take the scan?",
-    answer: "We've designed SpineScan with this in mind. The app includes a self-scanning mode with clear voice instructions and visual guides to help you position your phone correctly. Using the timer function or voice commands, you can trigger the scan without needing to touch the screen. We also provide accessories like phone stands (sold separately) that can make self-scanning even easier."
+    answer: "We've designed SpineScan with this in mind. The app includes a self-scanning mode with clear voice instructions and visual guides to help you position your phone correctly. Using the timer function or voice commands, you can trigger the scan without needing to touch the screen."
   }
 ];
 
