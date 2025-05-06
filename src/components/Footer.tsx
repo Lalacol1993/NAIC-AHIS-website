@@ -37,7 +37,6 @@ const Footer = () => {
               <li><a href="#features" className="text-slate-300 hover:text-white transition-colors">Features</a></li>
               <li><a href="#how-it-works" className="text-slate-300 hover:text-white transition-colors">How It Works</a></li>
               <li><a href="#benefits" className="text-slate-300 hover:text-white transition-colors">Benefits</a></li>
-              <li><a href="#clinics" className="text-slate-300 hover:text-white transition-colors">Partner Clinics</a></li>
               <li><a href="#faq" className="text-slate-300 hover:text-white transition-colors">FAQ</a></li>
             </ul>
           </div>
@@ -46,7 +45,6 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Press & Media</a></li>
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Terms of Service</a></li>
@@ -59,13 +57,13 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-teal-400" />
                 <a href="mailto:info@spinescan.io" className="text-slate-300 hover:text-white transition-colors">
-                  info@spinescan.io
+                  support@bluejay2.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <PhoneCall size={18} className="text-teal-400" />
                 <a href="tel:+18005551234" className="text-slate-300 hover:text-white transition-colors">
-                  +1 (800) 555-1234
+                  +607 1237465
                 </a>
               </li>
             </ul>
