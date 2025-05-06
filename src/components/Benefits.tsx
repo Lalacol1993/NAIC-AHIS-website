@@ -30,7 +30,7 @@ const Benefits = () => {
           <BenefitItem 
             icon={<Shield size={24} />}
             title="Non-Invasive Assessment"
-            description="Get accurate spine analysis without radiation or invasive procedures, all from the comfort of your home."
+            description="Get a spine analysis without radiation or invasive procedures, all from the comfort of your home."
           />
           
           <BenefitItem 
