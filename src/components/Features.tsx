@@ -26,13 +26,13 @@ const Features = () => {
           <FeatureCard 
             icon={<Camera size={24} />}
             title="AI Spine Scanning"
-            description="Advanced computer vision technology accurately detects 33 points on your spine using just your phone's camera."
+            description="Modern LIDAR technology allows us to accurately make a 3D model of your spine, and with the help of AI interpret the model into specialised advice just for you."
           />
           
           <FeatureCard 
             icon={<BrainCircuit size={24} />}
             title="Intelligent Analysis"
-            description="Proprietary AI algorithms analyze your spine's alignment and provide personalized insights and recommendations."
+            description="AI algorithms analyze your spine's alignment and provide personalized insights and recommendations."
           />
           
           <FeatureCard 
@@ -45,18 +45,6 @@ const Features = () => {
             icon={<Globe size={24} />}
             title="Multilingual Support"
             description="Full functionality in 3 languages with text-to-speech capability for enhanced accessibility."
-          />
-          
-          <FeatureCard 
-            icon={<Stethoscope size={24} />}
-            title="Professional Network"
-            description="Connect with certified healthcare professionals specializing in spine health and posture correction."
-          />
-          
-          <FeatureCard 
-            icon={<CalendarCheck size={24} />}
-            title="Clinic Booking"
-            description="Seamlessly book appointments with partnering clinics directly through the app interface."
           />
         </div>
       </div>
