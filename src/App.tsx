@@ -17,7 +17,7 @@ function App() {
         <Features />
         <HowItWorks />
         <Benefits />
-        <FAQ />
+        <ChatbotBubble />
         <DownloadCTA />
       </main>
       <Footer />
