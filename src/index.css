@@ -86,11 +86,14 @@
 .chat-footer {
   padding: 15px;
   border-top: 1px solid #eee;
+  background: white;
 }
 
 .chat-form {
   display: flex;
+  align-items: center;
   gap: 10px;
+  position: relative;
 }
 
 .message-input {
@@ -99,6 +102,8 @@
   border: 1px solid #ddd;
   border-radius: 20px;
   outline: none;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .message-input:focus {
@@ -110,14 +115,23 @@
   color: white;
   border: none;
   border-radius: 50%;
+  min-width: 35px;
   width: 35px;
   height: 35px;
+  padding: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
 }
 
 #send-message:hover {
   background: #593bab;
+}
+
+#send-message svg {
+  width: 18px;
+  height: 18px;
 }
