@@ -13,7 +13,7 @@ import DownloadCTA from "./components/DownloadCTA";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const chatBodyRef = useRef();
+  const chatBodyRef = useRef<HTMLDivElement>(null);
   const [showChatbot, setShowChatbot] = useState(false);
   const [chatHistory, setChatHistory] = useState([
     {
@@ -23,8 +23,8 @@ const App = () => {
     },
   ]);
 
-  const generateBotResponse = async (history) => {
-    const updateHistory = (text, isError = false) => {
+  const generateBotResponse = async (history: any[]) => {
+    const updateHistory = (text: string, isError = false) => {
       setChatHistory((prev) => [
         ...prev.filter((msg) => msg.text !== "Thinking..."),
         { role: "model", text, isError },
@@ -45,7 +45,7 @@ const App = () => {
       if (!response.ok) throw new Error(data?.error.message || "Something went wrong!");
       const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
       updateHistory(apiResponseText);
-    } catch (error) {
+    } catch (error: any) {
       updateHistory(error.message, true);
     }
   };
@@ -70,34 +70,49 @@ const App = () => {
       <Footer />
 
       {/* Chatbot Floating Button */}
-      <button onClick={() => setShowChatbot((prev) => !prev)} id="chatbot-toggler" className="fixed bottom-4 right-4 z-50 bg-primary-600 text-white p-3 rounded-full shadow-lg">
-        <span className="material-symbols-rounded">{showChatbot ? "close" : "mode_comment"}</span>
+      <button 
+        onClick={() => setShowChatbot(!showChatbot)} 
+        className="fixed bottom-4 right-4 z-50 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors"
+      >
+        {showChatbot ? (
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M18 6L6 18"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        )}
       </button>
 
       {/* Chatbot Popup */}
       {showChatbot && (
-        <div className="chatbot-popup fixed bottom-20 right-4 w-[350px] bg-white border border-gray-200 shadow-lg rounded-xl overflow-hidden z-50">
-          <div className="chat-header flex justify-between items-center px-4 py-2 border-b">
+        <div className="fixed bottom-20 right-4 w-[350px] bg-white border border-gray-200 shadow-lg rounded-xl overflow-hidden z-50">
+          <div className="bg-primary-600 text-white px-4 py-3 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <ChatbotIcon />
-              <h2 className="font-semibold">Chatbot</h2>
+              <h2 className="font-semibold">AI Assistant</h2>
             </div>
-            <button onClick={() => setShowChatbot(false)} className="material-symbols-rounded text-gray-600">
-              keyboard_arrow_down
+            <button onClick={() => setShowChatbot(false)} className="hover:bg-primary-700 rounded-full p-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 6L6 18"></path>
+                <path d="M6 6l12 12"></path>
+              </svg>
             </button>
           </div>
 
-          <div ref={chatBodyRef} className="chat-body max-h-[300px] overflow-y-auto px-4 py-2">
-            <div className="message bot-message flex gap-2 items-start mb-2">
+          <div ref={chatBodyRef} className="chat-body">
+            <div className="message bot-message">
               <ChatbotIcon />
-              <p className="message-text">Hey there<br />How can I help you today?</p>
+              <p className="message-text">Hey there! How can I help you today?</p>
             </div>
             {chatHistory.map((chat, index) => (
               <ChatMessage key={index} chat={chat} />
             ))}
           </div>
 
-          <div className="chat-footer border-t px-4 py-2">
+          <div className="chat-footer">
             <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} generateBotResponse={generateBotResponse} />
           </div>
         </div>
