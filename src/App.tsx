@@ -20,6 +20,7 @@ function App() {
         <Benefits />
         <FAQ />
         <DownloadCTA />
+        <ChatbotBubble />
   
       </main>
       <Footer />
