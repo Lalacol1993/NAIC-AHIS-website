@@ -16,8 +16,9 @@ function App() {
         <Features />
         <HowItWorks />
         <Benefits />
-        <ChatbotBubble />
+        <FAQ />
         <DownloadCTA />
+  
       </main>
       <Footer />
     </div>
