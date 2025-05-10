@@ -7,7 +7,6 @@ import Benefits from './components/Benefits';
 import FAQ from './components/FAQ';
 import DownloadCTA from './components/DownloadCTA';
 import Footer from './components/Footer';
-import ChatbotBubble from './components/ChatbotBubble';
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
         <Benefits />
         <FAQ />
         <DownloadCTA />
-        <ChatbotBubble />
+      
   
       </main>
       <Footer />
