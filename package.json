@@ -1,69 +1,33 @@
 {
-  "name": "vite-react-typescript-starter",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-    
-  "name": "@ebereplenty/chatbot",
-  "private": false,
-  "version": "1.0.1",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "bundle": "tsup src/index.ts"
-
+  "name": "@babel/helper-module-transforms",
+  "version": "7.25.7",
+  "description": "Babel helper functions for implementing ES6 module transformations",
+  "author": "The Babel Team (https://babel.dev/team)",
+  "homepage": "https://babel.dev/docs/en/next/babel-helper-module-transforms",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-helper-module-transforms"
+  },
+  "main": "./lib/index.js",
   "dependencies": {
-    "lucide-react": "^0.344.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.15",
-    "@mui/material": "^5.15.15",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-markdown": "^9.0.1"
-
-    
-
+    "@babel/helper-module-imports": "^7.25.7",
+    "@babel/helper-simple-access": "^7.25.7",
+    "@babel/helper-validator-identifier": "^7.25.7",
+    "@babel/traverse": "^7.25.7"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.1",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.18",
-    "eslint": "^9.9.1",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.11",
-    "globals": "^15.9.0",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "^8.3.0",
-    "vite": "^5.4.2",
-    "tsup": "^8.0.2",
-    "@typescript-eslint/parser": "^7.2.0",
-    "@typescript-eslint/eslint-plugin": "^7.2.0"
-    },
-     "keywords": [
-    "chatbot",
-    "chat",
-    "chatGPT",
-    "ai-chat",
-    "ai",
-    "artificial intelligence",
-    "openai"
-     ],
-  }
+    "@babel/core": "^7.25.7"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "type": "commonjs"
+}
