@@ -7,6 +7,8 @@ import Benefits from './components/Benefits';
 import FAQ from './components/FAQ';
 import DownloadCTA from './components/DownloadCTA';
 import Footer from './components/Footer';
+import ChatbotBubble from './components/ChatbotBubble';
+
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary-50 to-white text-secondary-800">
