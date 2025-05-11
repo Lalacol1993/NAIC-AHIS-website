@@ -32,10 +32,17 @@ const Header = () => {
     setLanguageMenuOpen(false);
   };
 
-  const scrollToHero = () => {
-    const heroSection = document.getElementById('hero');
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
       setIsMenuOpen(false);
     }
   };
@@ -51,7 +58,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <button
-            onClick={scrollToHero}
+            onClick={() => scrollToSection('hero')}
             className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
           >
             BlueJay²
@@ -59,10 +66,30 @@ const Header = () => {
         </div>
 
         <nav className="hidden md:flex items-center space-x-8 text-lg">
-          <a href="#features" className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">{t('nav.features')}</a>
-          <a href="#how-it-works" className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">{t('nav.howItWorks')}</a>
-          <a href="#benefits" className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">{t('nav.benefits')}</a>
-          <a href="#faq" className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">{t('nav.faq')}</a>
+          <button 
+            onClick={() => scrollToSection('features')}
+            className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors"
+          >
+            {t('nav.features')}
+          </button>
+          <button 
+            onClick={() => scrollToSection('how-it-works')}
+            className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors"
+          >
+            {t('nav.howItWorks')}
+          </button>
+          <button 
+            onClick={() => scrollToSection('benefits')}
+            className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors"
+          >
+            {t('nav.benefits')}
+          </button>
+          <button 
+            onClick={() => scrollToSection('faq')}
+            className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors"
+          >
+            {t('nav.faq')}
+          </button>
           
           <div className="relative">
             <button 
@@ -107,10 +134,30 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-800 shadow-lg absolute top-full left-0 w-full">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4 text-lg">
-            <a href="#features" className="font-medium py-2 text-gray-800 dark:text-gray-200" onClick={() => setIsMenuOpen(false)}>{t('nav.features')}</a>
-            <a href="#how-it-works" className="font-medium py-2 text-gray-800 dark:text-gray-200" onClick={() => setIsMenuOpen(false)}>{t('nav.howItWorks')}</a>
-            <a href="#benefits" className="font-medium py-2 text-gray-800 dark:text-gray-200" onClick={() => setIsMenuOpen(false)}>{t('nav.benefits')}</a>
-            <a href="#faq" className="font-medium py-2 text-gray-800 dark:text-gray-200" onClick={() => setIsMenuOpen(false)}>{t('nav.faq')}</a>
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="font-medium py-2 text-gray-800 dark:text-gray-200 text-left"
+            >
+              {t('nav.features')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="font-medium py-2 text-gray-800 dark:text-gray-200 text-left"
+            >
+              {t('nav.howItWorks')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('benefits')}
+              className="font-medium py-2 text-gray-800 dark:text-gray-200 text-left"
+            >
+              {t('nav.benefits')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('faq')}
+              className="font-medium py-2 text-gray-800 dark:text-gray-200 text-left"
+            >
+              {t('nav.faq')}
+            </button>
             
             <div className="relative py-2">
               <button 
