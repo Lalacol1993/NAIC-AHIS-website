@@ -18,7 +18,7 @@
     "description": "我们的应用结合尖端技术和直观界面，提供创新的脊椎健康解决方案。",
     "spineScanning": {
       "title": "AI脊椎扫描",
-      "description": "现代LIDAR技术使我们能够准确制作您的脊椎3D模型，并通过AI将模型转化为专门为您定制的建议。"
+      "description": "现代LIDAR技术使我们能够精确生成您的脊椎3D模型，并通过AI将模型转化为专门为您定制的建议。"
     },
     "analysis": {
       "title": "智能分析",
