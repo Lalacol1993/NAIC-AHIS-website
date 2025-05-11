@@ -35,7 +35,9 @@ const Header = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        scrolled 
+          ? 'bg-white dark:bg-gray-800 shadow-md py-3' 
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -46,14 +48,14 @@ const Header = () => {
         </div>
 
         <nav className="hidden md:flex items-center space-x-8 text-lg">
-          <a href="#features" className="font-medium hover:text-primary-700 transition-colors">{t('nav.features')}</a>
-          <a href="#how-it-works" className="font-medium hover:text-primary-700 transition-colors">{t('nav.howItWorks')}</a>
-          <a href="#benefits" className="font-medium hover:text-primary-700 transition-colors">{t('nav.benefits')}</a>
-          <a href="#faq" className="font-medium hover:text-primary-700 transition-colors">{t('nav.faq')}</a>
+          <a href="#features" className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">{t('nav.features')}</a>
+          <a href="#how-it-works" className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">{t('nav.howItWorks')}</a>
+          <a href="#benefits" className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">{t('nav.benefits')}</a>
+          <a href="#faq" className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors">{t('nav.faq')}</a>
           
           <div className="relative">
             <button 
-              className="flex items-center space-x-1 font-medium hover:text-primary-700 transition-colors"
+              className="flex items-center space-x-1 font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-colors"
               onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
             >
               <Globe size={20} />
@@ -62,12 +64,12 @@ const Header = () => {
             </button>
             
             {languageMenuOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 z-50">
+              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-1 z-50">
                 {languages.map((language) => (
                   <button
                     key={language.code}
-                    className={`block w-full text-left px-4 py-2 hover:bg-primary-50 ${
-                      language.code === i18n.language ? 'text-primary-700 font-medium' : ''
+                    className={`block w-full text-left px-4 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 ${
+                      language.code === i18n.language ? 'text-primary-700 dark:text-primary-400 font-medium' : ''
                     }`}
                     onClick={() => changeLanguage(language.code)}
                   >
@@ -84,7 +86,7 @@ const Header = () => {
         </button>
 
         <button
-          className="md:hidden text-secondary-600 focus:outline-none"
+          className="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -92,16 +94,16 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute top-full left-0 w-full">
+        <div className="md:hidden bg-white dark:bg-gray-800 shadow-lg absolute top-full left-0 w-full">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4 text-lg">
-            <a href="#features" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>{t('nav.features')}</a>
-            <a href="#how-it-works" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>{t('nav.howItWorks')}</a>
-            <a href="#benefits" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>{t('nav.benefits')}</a>
-            <a href="#faq" className="font-medium py-2" onClick={() => setIsMenuOpen(false)}>{t('nav.faq')}</a>
+            <a href="#features" className="font-medium py-2 text-gray-800 dark:text-gray-200" onClick={() => setIsMenuOpen(false)}>{t('nav.features')}</a>
+            <a href="#how-it-works" className="font-medium py-2 text-gray-800 dark:text-gray-200" onClick={() => setIsMenuOpen(false)}>{t('nav.howItWorks')}</a>
+            <a href="#benefits" className="font-medium py-2 text-gray-800 dark:text-gray-200" onClick={() => setIsMenuOpen(false)}>{t('nav.benefits')}</a>
+            <a href="#faq" className="font-medium py-2 text-gray-800 dark:text-gray-200" onClick={() => setIsMenuOpen(false)}>{t('nav.faq')}</a>
             
             <div className="relative py-2">
               <button 
-                className="flex items-center space-x-1 font-medium"
+                className="flex items-center space-x-1 font-medium text-gray-800 dark:text-gray-200"
                 onClick={(e) => {
                   e.stopPropagation();
                   setLanguageMenuOpen(!languageMenuOpen);
@@ -113,12 +115,12 @@ const Header = () => {
               </button>
               
               {languageMenuOpen && (
-                <div className="mt-2 bg-primary-50 rounded-lg py-1 pl-6">
+                <div className="mt-2 bg-primary-50 dark:bg-gray-700 rounded-lg py-1 pl-6">
                   {languages.map((language) => (
                     <button
                       key={language.code}
-                      className={`block w-full text-left py-2 ${
-                        language.code === i18n.language ? 'text-primary-700 font-medium' : ''
+                      className={`block w-full text-left py-2 text-gray-800 dark:text-gray-200 ${
+                        language.code === i18n.language ? 'text-primary-700 dark:text-primary-400 font-medium' : ''
                       }`}
                       onClick={() => changeLanguage(language.code)}
                     >
