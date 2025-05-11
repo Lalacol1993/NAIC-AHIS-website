@@ -14,7 +14,7 @@
 
 @layer components {
   .chat-body {
-    @apply h-[400px] overflow-y-auto p-4 bg-white;
+    @apply h-[400px] overflow-y-auto p-4 bg-white dark:bg-gray-800;
   }
 
   .message {
@@ -30,11 +30,11 @@
   }
 
   .message-text {
-    @apply text-gray-800 dark:text-gray-200;
+    @apply text-gray-800 dark:text-gray-100;
   }
 
   .chat-footer {
-    @apply border-t border-gray-200 p-4 bg-white;
+    @apply border-t border-gray-200 dark:border-gray-700 p-4 bg-white dark:bg-gray-800;
   }
 
   .chat-input {
@@ -72,6 +72,10 @@
   background-color: #fafafa;
 }
 
+.dark .chat-body {
+  background-color: #1f2937;
+}
+
 .chat-body::-webkit-scrollbar {
   width: 6px;
 }
@@ -83,6 +87,10 @@
 .chat-body::-webkit-scrollbar-thumb {
   background-color: #ddd;
   border-radius: 3px;
+}
+
+.dark .chat-body::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
 }
 
 .message {
@@ -118,6 +126,13 @@
   background: #f0f7ff;
   border: 1px solid #e6f0ff;
   border-radius: 2px 12px 12px 12px;
+  color: #1f2937;
+}
+
+.dark .bot-message .message-text {
+  background: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
 }
 
 .user-message .message-text {
@@ -126,11 +141,20 @@
   border-radius: 12px 2px 12px 12px;
 }
 
+.dark .user-message .message-text {
+  background: #1d4ed8;
+}
+
 /* Chat Footer */
 .chat-footer {
   padding: 1rem;
   background: white;
   border-top: 1px solid #eee;
+}
+
+.dark .chat-footer {
+  background: #1f2937;
+  border-top-color: #374151;
 }
 
 .chat-form {
@@ -149,10 +173,22 @@
   outline: none;
   font-size: 0.95rem;
   transition: border-color 0.2s ease;
+  background: white;
+  color: #1f2937;
+}
+
+.dark .message-input {
+  background: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
 }
 
 .message-input:focus {
   border-color: #2563eb;
+}
+
+.dark .message-input:focus {
+  border-color: #60a5fa;
 }
 
 #send-message {
@@ -176,6 +212,14 @@
 
 #send-message:hover {
   background: #1d4ed8;
+}
+
+.dark #send-message {
+  background: #3b82f6;
+}
+
+.dark #send-message:hover {
+  background: #2563eb;
 }
 
 #send-message svg {
