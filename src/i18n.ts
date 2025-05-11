@@ -7,6 +7,7 @@ import msTranslations from './translations/ms.json';
 import zhTranslations from './translations/zh.json';
 
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
@@ -20,8 +21,11 @@ i18n
         translation: zhTranslations
       }
     },
-    lng: 'en',
     fallbackLng: 'en',
+    detection: {
+      order: ['navigator', 'htmlTag', 'path', 'subdomain'],
+      caches: ['localStorage'],
+    },
     interpolation: {
       escapeValue: false
     }
