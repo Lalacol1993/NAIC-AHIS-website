@@ -11,6 +11,7 @@ import Benefits from "./components/Benefits";
 import FAQ from "./components/FAQ";
 import DownloadCTA from "./components/DownloadCTA";
 import Footer from "./components/Footer";
+import ThemeToggle from "./components/ThemeToggle";
 import { useTranslation } from 'react-i18next';
 import './i18n';
 
@@ -74,7 +75,7 @@ const App = () => {
   }, [chatHistory]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary-50 to-white text-secondary-800">
+    <div className="min-h-screen bg-gradient-to-b from-primary-50 to-white dark:from-gray-900 dark:to-gray-800 text-secondary-800 dark:text-gray-100 transition-colors duration-200">
       <Header />
       <main className="text-lg">
         <Hero />
@@ -85,6 +86,11 @@ const App = () => {
         <DownloadCTA />
       </main>
       <Footer />
+
+      {/* Theme Toggle Button */}
+      <div className="fixed top-4 right-4 z-50">
+        <ThemeToggle />
+      </div>
 
       {/* Chatbot Floating Button */}
       <button 
@@ -105,7 +111,7 @@ const App = () => {
 
       {/* Chatbot Popup */}
       {showChatbot && (
-        <div className="fixed bottom-20 right-4 w-[350px] bg-white border border-gray-200 shadow-lg rounded-xl overflow-hidden z-50">
+        <div className="fixed bottom-20 right-4 w-[350px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden z-50">
           <div className="bg-primary-600 text-white px-4 py-3 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <ChatbotIcon />
@@ -119,7 +125,7 @@ const App = () => {
             </button>
           </div>
 
-          <div ref={chatBodyRef} className="chat-body">
+          <div ref={chatBodyRef} className="chat-body dark:bg-gray-800">
             <div className="message bot-message">
               <ChatbotIcon />
               <p className="message-text">{t('chatbot.welcome')}</p>
@@ -129,7 +135,7 @@ const App = () => {
             ))}
           </div>
 
-          <div className="chat-footer">
+          <div className="chat-footer dark:bg-gray-800 dark:border-t dark:border-gray-700">
             <ChatForm 
               chatHistory={chatHistory} 
               setChatHistory={setChatHistory} 

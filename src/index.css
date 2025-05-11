@@ -6,6 +6,56 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .chat-body {
+    @apply h-[400px] overflow-y-auto p-4 bg-white;
+  }
+
+  .message {
+    @apply flex items-start gap-3 mb-4;
+  }
+
+  .bot-message {
+    @apply bg-gray-100 dark:bg-gray-700 p-3 rounded-lg;
+  }
+
+  .user-message {
+    @apply bg-primary-100 dark:bg-primary-900 p-3 rounded-lg ml-auto;
+  }
+
+  .message-text {
+    @apply text-gray-800 dark:text-gray-200;
+  }
+
+  .chat-footer {
+    @apply border-t border-gray-200 p-4 bg-white;
+  }
+
+  .chat-input {
+    @apply w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-700 dark:text-white;
+  }
+
+  .chat-send-button {
+    @apply bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors;
+  }
+}
+
+/* Dark mode transitions */
+.dark {
+  color-scheme: dark;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  @apply transition-colors duration-200;
+}
+
 /* Custom Global Styles */
 * {
   margin: 0;
