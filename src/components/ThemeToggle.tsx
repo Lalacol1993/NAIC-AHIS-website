@@ -1,7 +1,26 @@
 import { useEffect, useState } from 'react';
 
 const ThemeToggle = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // Initialize state based on system preference or saved preference
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        return savedTheme === 'dark';
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false;
+  });
+
+  // Apply theme immediately on mount
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
 
   useEffect(() => {
     // Function to update theme
