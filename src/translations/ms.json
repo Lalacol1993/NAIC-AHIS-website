@@ -1,0 +1,173 @@
+{
+  "nav": {
+    "features": "Ciri-ciri",
+    "howItWorks": "Cara Ia Berfungsi",
+    "benefits": "Manfaat",
+    "faq": "Soalan Lazim",
+    "downloadApp": "Muat Turun Aplikasi"
+  },
+  "hero": {
+    "title": "Imbas Tulang Belakang Anda.",
+    "subtitle": "Ubah Kesihatan Anda.",
+    "description": "Teknologi AI revolusioner mengimbas tulang belakang anda melalui sensor LIDAR telefon anda, menjana model 3D, dan memberikan analisis segera untuk keputusan kesihatan yang lebih baik.",
+    "downloadButton": "Muat Turun Aplikasi",
+    "learnMoreButton": "Ketahui Lebih Lanjut"
+  },
+  "features": {
+    "title": "Ciri-ciri Lanjutan, Pengalaman Mudah",
+    "description": "Aplikasi kami menggabungkan teknologi canggih dengan antara muka yang intuitif untuk menyampaikan penyelesaian kesihatan tulang belakang yang revolusioner.",
+    "spineScanning": {
+      "title": "Pengimbasan Tulang Belakang AI",
+      "description": "Teknologi LIDAR moden membolehkan kami membuat model 3D tulang belakang anda dengan tepat, dan dengan bantuan AI mentafsir model tersebut menjadi nasihat khusus untuk anda."
+    },
+    "analysis": {
+      "title": "Analisis Pintar",
+      "description": "Algoritma AI menganalisis keselarasan tulang belakang anda dan memberikan pandangan dan cadangan yang diperibadikan."
+    },
+    "assistant": {
+      "title": "Pembantu Kesihatan AI",
+      "description": "Chatbot bersepadu menjawab soalan anda tentang kesihatan tulang belakang dan membimbing anda melalui senaman yang disyorkan."
+    },
+    "multilingual": {
+      "title": "Sokongan Pelbagai Bahasa",
+      "description": "Fungsi penuh dalam 3 bahasa dengan keupayaan teks-ke-ucapan untuk aksesibiliti yang lebih baik."
+    }
+  },
+  "howItWorks": {
+    "title": "Cara SpineScan Berfungsi",
+    "description": "Proses intuitif kami membawa anda dari imbasan ke pandangan yang boleh ditindaklanjuti dalam beberapa minit. Alami masa depan penilaian kesihatan tulang belakang.",
+    "steps": {
+      "scan": {
+        "title": "Imbas Belakang Anda",
+        "description": "Letakkan kamera telefon anda seperti yang dipandu dan tangkap imej belakang anda yang jelas. Aplikasi kami akan membimbing anda melalui kedudukan yang sempurna."
+      },
+      "analysis": {
+        "title": "Analisis AI",
+        "description": "AI lanjutan kami mengenal pasti 33 titik utama di sepanjang tulang belakang anda dan menganalisis keselarasan, kelengkungan, dan kedudukannya."
+      },
+      "results": {
+        "title": "Dapatkan Keputusan Anda",
+        "description": "Terima laporan komprehensif dengan visualisasi keadaan tulang belakang anda dan cadangan yang diperibadikan."
+      },
+      "action": {
+        "title": "Ambil Tindakan",
+        "description": "Ikuti senaman berpanduan, berbual dengan pembantu AI kami, atau buat temu janji dengan klinik rakan kongsi berdekatan untuk penjagaan profesional."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Manfaat SpineScan",
+    "description": "Aplikasi kami menawarkan lebih daripada sekadar diagnosis—ia adalah penyelesaian komprehensif untuk perjalanan kesihatan tulang belakang anda.",
+    "items": {
+      "nonInvasive": {
+        "title": "Penilaian Tanpa Invasif",
+        "description": "Dapatkan analisis tulang belakang tanpa radiasi atau prosedur invasif, semuanya dari keselesaan rumah anda."
+      },
+      "instant": {
+        "title": "Keputusan Segera",
+        "description": "Terima analisis dan cadangan segera tanpa menunggu hari untuk keputusan diagnostik tradisional."
+      },
+      "support": {
+        "title": "Sokongan AI 24/7",
+        "description": "Akses chatbot pintar kami pada bila-bila masa dengan soalan tentang kesihatan tulang belakang, postur, atau senaman yang disyorkan."
+      },
+      "personalized": {
+        "title": "Panduan Peribadi",
+        "description": "Dapatkan cadangan yang disesuaikan berdasarkan profil tulang belakang unik anda dan kebimbangan kesihatan khusus."
+      },
+      "tracking": {
+        "title": "Pengesanan Kemajuan",
+        "description": "Pantau peningkatan dari masa ke masa dengan laporan kemajuan terperinci dan analisis perbandingan."
+      },
+      "detection": {
+        "title": "Pengesanan Awal",
+        "description": "Kenal pasti masalah tulang belakang yang berpotensi sebelum ia menjadi masalah serius, membolehkan penjagaan proaktif."
+      }
+    },
+    "network": {
+      "title": "Rangkaian Klinikal Profesional",
+      "description": "Berhubung dengan pakar tulang belakang yang disahkan dan dapatkan penjagaan profesional apabila diperlukan.",
+      "features": [
+        "Pakar tulang belakang yang disahkan",
+        "Tempahan temu janji terus",
+        "Data diagnostik dikongsi",
+        "Perancangan penjagaan bersepadu"
+      ]
+    }
+  },
+  "download": {
+    "title": "Mulakan Perjalanan Kesihatan Tulang Belakang Anda Hari Ini",
+    "description": "Muat turun SpineScan sekarang dan ambil langkah pertama ke arah memahami dan meningkatkan kesihatan tulang belakang anda. Teknologi berkuasa AI kami bersedia untuk memberikan anda pandangan yang sebelum ini hanya tersedia melalui lawatan klinikal.",
+    "appStore": {
+      "subtitle": "Muat turun di",
+      "title": "App Store"
+    },
+    "playStore": {
+      "subtitle": "Dapatkan di",
+      "title": "Google Play"
+    }
+  },
+  "faq": {
+    "title": "Soalan Lazim",
+    "description": "Cari jawapan kepada soalan biasa tentang teknologi dan fungsi SpineScan.",
+    "accuracy": {
+      "question": "Berapa tepatkah teknologi pengimbasan tulang belakang?",
+      "answer": "Teknologi pengimbasan berkuasa AI kami telah disahkan secara klinikal untuk mengesan titik tulang belakang dengan ketepatan sehingga 97% berbanding penilaian profesional. Teknologi ini telah diuji terhadap kaedah tradisional seperti sinar-X dan pemeriksaan fizikal profesional dengan korelasi yang sangat baik. Walau bagaimanapun, adalah penting untuk diperhatikan bahawa SpineScan direka sebagai alat saringan dan pemantauan, bukan pengganti untuk pengimejan perubatan apabila diperlukan secara klinikal."
+    },
+    "privacy": {
+      "question": "Adakah data kesihatan saya peribadi dan selamat?",
+      "answer": "Sudah tentu. Kami mengambil privasi data dengan sangat serius. Semua data kesihatan anda disulitkan dari hujung ke hujung dan disimpan dengan selamat mengikut peraturan HIPAA. Data anda tidak pernah dijual kepada pihak ketiga, dan anda mempunyai kawalan penuh ke atas siapa yang boleh mengakses maklumat anda. Anda juga boleh memilih untuk memadamkan data anda pada bila-bila masa melalui tetapan aplikasi."
+    },
+    "languages": {
+      "question": "Apakah bahasa yang disokong oleh chatbot AI?",
+      "answer": "Pada masa ini, chatbot AI kami menyokong Bahasa Inggeris, Bahasa Melayu, dan 中文 dengan interaksi teks dan suara. Kami sentiasa berusaha untuk menambah lebih banyak bahasa untuk menjadikan maklumat kesihatan tulang belakang boleh diakses oleh orang di seluruh dunia. Setiap versi bahasa dilatih secara khusus pada terminologi perubatan untuk memastikan ketepatan dalam komunikasi kesihatan."
+    },
+    "scanFrequency": {
+      "question": "Berapa kerapkah saya perlu mengimbas tulang belakang saya?",
+      "answer": "Untuk pemantauan umum, kami mengesyorkan imbasan sekali setiap 2-4 minggu. Walau bagaimanapun, jika anda mengikuti pelan rawatan atau program pemulihan tertentu, pembekal penjagaan kesihatan anda mungkin mengesyorkan imbasan yang lebih kerap untuk menjejaki kemajuan. Aplikasi akan menghantar peringatan lembut berdasarkan jadual peribadi anda."
+    },
+    "contact": {
+      "title": "Masih ada soalan?",
+      "description": "Pasukan sokongan kami bersedia untuk membantu anda dengan sebarang soalan yang anda ada tentang SpineScan.",
+      "button": "Hubungi Sokongan"
+    }
+  },
+  "chatbot": {
+    "title": "Pembantu AI",
+    "welcome": "Hai! Apa yang boleh saya bantu hari ini?",
+    "thinking": "Berfikir...",
+    "inputPlaceholder": "Taip mesej anda...",
+    "error": "Maaf, saya menghadapi ralat. Sila cuba lagi."
+  },
+  "footer": {
+    "description": "Teknologi kesihatan tulang belakang revolusioner di hujung jari anda. Imbas, analisis, dan tingkatkan kesihatan tulang belakang anda dengan pandangan berkuasa AI.",
+    "explore": {
+      "title": "Terokai",
+      "features": "Ciri-ciri",
+      "howItWorks": "Cara Ia Berfungsi",
+      "benefits": "Manfaat",
+      "faq": "Soalan Lazim"
+    },
+    "company": {
+      "title": "Syarikat",
+      "about": "Tentang Kami",
+      "press": "Akhbar & Media",
+      "privacy": "Dasar Privasi",
+      "terms": "Terma Perkhidmatan"
+    },
+    "contact": {
+      "title": "Hubungi",
+      "email": "support@bluejay2.com",
+      "phone": "+607 1237465",
+      "download": "Muat Turun Aplikasi",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "copyright": "Hak Cipta Terpelihara.",
+    "links": {
+      "privacy": "Privasi",
+      "terms": "Terma",
+      "cookies": "Kuki"
+    }
+  }
+} 

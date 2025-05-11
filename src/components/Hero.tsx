@@ -1,32 +1,34 @@
 import React from 'react';
 import { ArrowRight, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="w-full lg:w-1/2 lg:pr-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Scan Your Spine.
+              {t('hero.title')}
               <span className="block mt-2 bg-gradient-to-r from-blue-800 to-teal-600 bg-clip-text text-transparent">
-                Transform Your Health.
+                {t('hero.subtitle')}
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-slate-700 mb-8 leading-relaxed">
-              Revolutionary AI technology scans your spine through your phones LIDAR sensor, 
-              generates 3d mesh, and provides instant analysis for better health decisions.
+              {t('hero.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <button className="bg-blue-800 hover:bg-blue-900 text-white font-medium py-3 px-8 rounded-full transition-all hover:shadow-lg flex items-center justify-center gap-2">
                 <Phone size={20} />
-                <span>Download App</span>
+                <span>{t('hero.downloadButton')}</span>
               </button>
               
               <button className="bg-transparent border-2 border-blue-800 text-blue-800 hover:bg-blue-50 font-medium py-3 px-8 rounded-full transition-all flex items-center justify-center gap-2">
-                Learn More
+                {t('hero.learnMoreButton')}
                 <ArrowRight size={18} />
               </button>
             </div>

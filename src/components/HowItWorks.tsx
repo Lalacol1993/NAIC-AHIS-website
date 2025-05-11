@@ -1,44 +1,45 @@
 import React, { useState } from 'react';
 import { CheckCircle } from 'lucide-react';
-
-const steps = [
-  {
-    id: 1,
-    title: "Scan Your Back",
-    description: "Position your phone camera as guided and capture a clear image of your back. Our app will walk you through the perfect positioning.",
-    image: "https://images.pexels.com/photos/5473182/pexels-photo-5473182.jpeg"
-  },
-  {
-    id: 2,
-    title: "AI Analysis",
-    description: "Our advanced AI identifies 33 key points along your spine and analyzes their alignment, curvature, and positioning.",
-    image: "https://images.pexels.com/photos/8438922/pexels-photo-8438922.jpeg"
-  },
-  {
-    id: 3,
-    title: "Get Your Results",
-    description: "Receive a comprehensive report with visualizations of your spine's condition and personalized recommendations.",
-    image: "https://images.pexels.com/photos/6497109/pexels-photo-6497109.jpeg"
-  },
-  {
-    id: 4,
-    title: "Take Action",
-    description: "Follow guided exercises, chat with our AI assistant, or book an appointment with a nearby partnering clinic for professional care.",
-    image: "https://images.pexels.com/photos/8942991/pexels-photo-8942991.jpeg"
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState(1);
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      id: 1,
+      title: t('howItWorks.steps.scan.title'),
+      description: t('howItWorks.steps.scan.description'),
+      image: "https://images.pexels.com/photos/5473182/pexels-photo-5473182.jpeg"
+    },
+    {
+      id: 2,
+      title: t('howItWorks.steps.analysis.title'),
+      description: t('howItWorks.steps.analysis.description'),
+      image: "https://images.pexels.com/photos/8438922/pexels-photo-8438922.jpeg"
+    },
+    {
+      id: 3,
+      title: t('howItWorks.steps.results.title'),
+      description: t('howItWorks.steps.results.description'),
+      image: "https://images.pexels.com/photos/6497109/pexels-photo-6497109.jpeg"
+    },
+    {
+      id: 4,
+      title: t('howItWorks.steps.action.title'),
+      description: t('howItWorks.steps.action.description'),
+      image: "https://images.pexels.com/photos/8942991/pexels-photo-8942991.jpeg"
+    }
+  ];
 
   return (
     <section id="how-it-works" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">How SpineScan Works</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('howItWorks.title')}</h2>
           <p className="text-lg text-slate-700">
-            Our intuitive process takes you from scanning to actionable insights in minutes.
-            Experience the future of spine health assessment.
+            {t('howItWorks.description')}
           </p>
         </div>
         

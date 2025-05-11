@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Zap, MessageCircle, Sparkles, LineChart, Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const BenefitItem = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
   <div className="flex items-start gap-4">
@@ -16,63 +17,65 @@ const BenefitItem = ({ icon, title, description }: { icon: React.ReactNode, titl
 );
 
 const Benefits = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="benefits" className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Benefits of SpineScan</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('benefits.title')}</h2>
           <p className="text-lg text-slate-700">
-            Our app offers more than just a diagnosis—it's a comprehensive solution for your spine health journey.
+            {t('benefits.description')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           <BenefitItem 
             icon={<Shield size={24} />}
-            title="Non-Invasive Assessment"
-            description="Get a spine analysis without radiation or invasive procedures, all from the comfort of your home."
+            title={t('benefits.items.nonInvasive.title')}
+            description={t('benefits.items.nonInvasive.description')}
           />
           
           <BenefitItem 
             icon={<Zap size={24} />}
-            title="Instant Results"
-            description="Receive immediate analysis and recommendations without waiting days for traditional diagnostic results."
+            title={t('benefits.items.instant.title')}
+            description={t('benefits.items.instant.description')}
           />
           
           <BenefitItem 
             icon={<MessageCircle size={24} />}
-            title="24/7 AI Support"
-            description="Access our intelligent chatbot anytime with questions about your spine health, posture, or recommended exercises."
+            title={t('benefits.items.support.title')}
+            description={t('benefits.items.support.description')}
           />
           
           <BenefitItem 
             icon={<Sparkles size={24} />}
-            title="Personalized Guidance"
-            description="Get customized recommendations based on your unique spine profile and specific health concerns."
+            title={t('benefits.items.personalized.title')}
+            description={t('benefits.items.personalized.description')}
           />
           
           <BenefitItem 
             icon={<LineChart size={24} />}
-            title="Progress Tracking"
-            description="Monitor improvements over time with detailed progress reports and comparison analytics."
+            title={t('benefits.items.tracking.title')}
+            description={t('benefits.items.tracking.description')}
           />
           
           <BenefitItem 
             icon={<Clock size={24} />}
-            title="Early Detection"
-            description="Identify potential spine issues before they become serious problems, enabling proactive care."
+            title={t('benefits.items.detection.title')}
+            description={t('benefits.items.detection.description')}
           />
         </div>
         
         <div className="mt-16 bg-gradient-to-r from-blue-800 to-teal-600 rounded-2xl overflow-hidden shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             <div className="p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Professional Clinical Network</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{t('benefits.network.title')}</h3>
               <p className="text-blue-100 mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum maximus mauris sed sodales.
-                </p>
+                {t('benefits.network.description')}
+              </p>
               <ul className="space-y-3 text-white">
-                {['Verified spine specialists', 'Direct appointment booking', 'Shared diagnostic data', 'Integrated care planning'].map((item, index) => (
+                {t('benefits.network.features', { returnObjects: true }).map((item: string, index: number) => (
                   <li key={index} className="flex items-center">
                     <svg className="h-5 w-5 mr-2 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

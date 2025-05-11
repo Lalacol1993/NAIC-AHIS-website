@@ -1,0 +1,173 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "benefits": "Benefits",
+    "faq": "FAQ",
+    "downloadApp": "Download App"
+  },
+  "hero": {
+    "title": "Scan Your Spine.",
+    "subtitle": "Transform Your Health.",
+    "description": "Revolutionary AI technology scans your spine through your phones LIDAR sensor, generates 3d mesh, and provides instant analysis for better health decisions.",
+    "downloadButton": "Download App",
+    "learnMoreButton": "Learn More"
+  },
+  "features": {
+    "title": "Advanced Features, Simple Experience",
+    "description": "Our app combines cutting-edge technology with an intuitive interface to deliver a revolutionary spine health solution.",
+    "spineScanning": {
+      "title": "AI Spine Scanning",
+      "description": "Modern LIDAR technology allows us to accurately make a 3D model of your spine, and with the help of AI interpret the model into specialised advice just for you."
+    },
+    "analysis": {
+      "title": "Intelligent Analysis",
+      "description": "AI algorithms analyze your spine's alignment and provide personalized insights and recommendations."
+    },
+    "assistant": {
+      "title": "AI Health Assistant",
+      "description": "Integrated chatbot answers your questions about spine health and guides you through recommended exercises."
+    },
+    "multilingual": {
+      "title": "Multilingual Support",
+      "description": "Full functionality in 3 languages with text-to-speech capability for enhanced accessibility."
+    }
+  },
+  "howItWorks": {
+    "title": "How SpineScan Works",
+    "description": "Our intuitive process takes you from scanning to actionable insights in minutes. Experience the future of spine health assessment.",
+    "steps": {
+      "scan": {
+        "title": "Scan Your Back",
+        "description": "Position your phone camera as guided and capture a clear image of your back. Our app will walk you through the perfect positioning."
+      },
+      "analysis": {
+        "title": "AI Analysis",
+        "description": "Our advanced AI identifies 33 key points along your spine and analyzes their alignment, curvature, and positioning."
+      },
+      "results": {
+        "title": "Get Your Results",
+        "description": "Receive a comprehensive report with visualizations of your spine's condition and personalized recommendations."
+      },
+      "action": {
+        "title": "Take Action",
+        "description": "Follow guided exercises, chat with our AI assistant, or book an appointment with a nearby partnering clinic for professional care."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Benefits of SpineScan",
+    "description": "Our app offers more than just a diagnosis—it's a comprehensive solution for your spine health journey.",
+    "items": {
+      "nonInvasive": {
+        "title": "Non-Invasive Assessment",
+        "description": "Get a spine analysis without radiation or invasive procedures, all from the comfort of your home."
+      },
+      "instant": {
+        "title": "Instant Results",
+        "description": "Receive immediate analysis and recommendations without waiting days for traditional diagnostic results."
+      },
+      "support": {
+        "title": "24/7 AI Support",
+        "description": "Access our intelligent chatbot anytime with questions about your spine health, posture, or recommended exercises."
+      },
+      "personalized": {
+        "title": "Personalized Guidance",
+        "description": "Get customized recommendations based on your unique spine profile and specific health concerns."
+      },
+      "tracking": {
+        "title": "Progress Tracking",
+        "description": "Monitor improvements over time with detailed progress reports and comparison analytics."
+      },
+      "detection": {
+        "title": "Early Detection",
+        "description": "Identify potential spine issues before they become serious problems, enabling proactive care."
+      }
+    },
+    "network": {
+      "title": "Professional Clinical Network",
+      "description": "Connect with verified spine specialists and get professional care when needed.",
+      "features": [
+        "Verified spine specialists",
+        "Direct appointment booking",
+        "Shared diagnostic data",
+        "Integrated care planning"
+      ]
+    }
+  },
+  "download": {
+    "title": "Start Your Spine Health Journey Today",
+    "description": "Download SpineScan now and take the first step toward understanding and improving your spine health. Our AI-powered technology is ready to provide you with insights previously available only through clinical visits.",
+    "appStore": {
+      "subtitle": "Download on the",
+      "title": "App Store"
+    },
+    "playStore": {
+      "subtitle": "Get it on",
+      "title": "Google Play"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about SpineScan technology and functionality.",
+    "accuracy": {
+      "question": "How accurate is the spine scanning technology?",
+      "answer": "Our AI-powered scanning technology has been clinically validated to detect spine points with up to 97% accuracy compared to professional assessments. The technology has been tested against traditional methods such as X-rays and professional physical examinations with excellent correlation. However, it's important to note that SpineScan is designed as a screening and monitoring tool, not a replacement for medical imaging when clinically indicated."
+    },
+    "privacy": {
+      "question": "Is my health data private and secure?",
+      "answer": "Absolutely. We take data privacy extremely seriously. All your health data is encrypted end-to-end and stored securely in compliance with HIPAA regulations. Your data is never sold to third parties, and you have complete control over who can access your information. You can also choose to delete your data at any time through the app settings."
+    },
+    "languages": {
+      "question": "What languages does the AI chatbot support?",
+      "answer": "Currently, our AI chatbot supports English, Bahasa Melayu, and 中文 with both text and voice interaction. We're continuously working to add more languages to make spine health information accessible to people worldwide. Each language version is specially trained on medical terminology to ensure accuracy in health communications."
+    },
+    "scanFrequency": {
+      "question": "How often should I scan my spine?",
+      "answer": "For general monitoring, we recommend scanning once every 2-4 weeks. However, if you're following a specific treatment plan or rehabilitation program, your healthcare provider might recommend more frequent scans to track progress. The app will send you gentle reminders based on your personalized schedule."
+    },
+    "contact": {
+      "title": "Still have questions?",
+      "description": "Our support team is ready to help you with any questions you might have about SpineScan.",
+      "button": "Contact Support"
+    }
+  },
+  "chatbot": {
+    "title": "AI Assistant",
+    "welcome": "Hey there! How can I help you today?",
+    "thinking": "Thinking...",
+    "inputPlaceholder": "Type your message...",
+    "error": "Sorry, I encountered an error. Please try again."
+  },
+  "footer": {
+    "description": "Revolutionary spine health technology in the palm of your hand. Scan, analyze, and improve your spine health with AI-powered insights.",
+    "explore": {
+      "title": "Explore",
+      "features": "Features",
+      "howItWorks": "How It Works",
+      "benefits": "Benefits",
+      "faq": "FAQ"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "press": "Press & Media",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "support@bluejay2.com",
+      "phone": "+607 1237465",
+      "download": "Download App",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "copyright": "All rights reserved.",
+    "links": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies"
+    }
+  }
+} 

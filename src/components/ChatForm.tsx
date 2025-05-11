@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from 'react-i18next';
 
 interface ChatMessage {
   role: "user" | "model";
@@ -11,10 +12,12 @@ interface ChatFormProps {
   chatHistory: ChatMessage[];
   setChatHistory: (history: ChatMessage[]) => void;
   generateBotResponse: (history: ChatMessage[]) => Promise<void>;
+  placeholder: string;
 }
 
-const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse }: ChatFormProps) => {
+const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholder }: ChatFormProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const { t } = useTranslation();
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,7 +36,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse }: ChatForm
 
     // Add thinking message after a short delay
     setTimeout(() => {
-      setChatHistory(history => [...history, { role: "model", text: "Thinking..." }]);
+      setChatHistory(history => [...history, { role: "model", text: t('chatbot.thinking') }]);
       
       // Generate bot response
       generateBotResponse([
@@ -49,7 +52,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse }: ChatForm
       <input
         ref={inputRef}
         type="text"
-        placeholder="Type your message..."
+        placeholder={placeholder}
         className="message-input"
         aria-label="Chat message"
       />

@@ -1,0 +1,173 @@
+{
+  "nav": {
+    "features": "功能特点",
+    "howItWorks": "工作原理",
+    "benefits": "优势",
+    "faq": "常见问题",
+    "downloadApp": "下载应用"
+  },
+  "hero": {
+    "title": "扫描您的脊椎。",
+    "subtitle": "改变您的健康。",
+    "description": "革命性的AI技术通过手机LIDAR传感器扫描您的脊椎，生成3D模型，并提供即时分析，帮助您做出更好的健康决策。",
+    "downloadButton": "下载应用",
+    "learnMoreButton": "了解更多"
+  },
+  "features": {
+    "title": "先进功能，简单体验",
+    "description": "我们的应用结合尖端技术和直观界面，提供革命性的脊椎健康解决方案。",
+    "spineScanning": {
+      "title": "AI脊椎扫描",
+      "description": "现代LIDAR技术使我们能够准确制作您的脊椎3D模型，并通过AI将模型转化为专门为您定制的建议。"
+    },
+    "analysis": {
+      "title": "智能分析",
+      "description": "AI算法分析您的脊椎排列，提供个性化的见解和建议。"
+    },
+    "assistant": {
+      "title": "AI健康助手",
+      "description": "集成聊天机器人回答您关于脊椎健康的问题，并指导您完成推荐的运动。"
+    },
+    "multilingual": {
+      "title": "多语言支持",
+      "description": "支持3种语言的完整功能，具有文本转语音功能，提升可访问性。"
+    }
+  },
+  "howItWorks": {
+    "title": "SpineScan 工作原理",
+    "description": "我们的直观流程让您在几分钟内从扫描到获得可操作的见解。体验脊椎健康评估的未来。",
+    "steps": {
+      "scan": {
+        "title": "扫描您的背部",
+        "description": "按照引导放置手机相机，拍摄清晰的背部图像。我们的应用将指导您完成完美的定位。"
+      },
+      "analysis": {
+        "title": "AI 分析",
+        "description": "我们的先进 AI 识别您脊椎上的 33 个关键点，并分析其排列、曲率和位置。"
+      },
+      "results": {
+        "title": "获取结果",
+        "description": "接收包含您脊椎状况可视化和个性化建议的综合报告。"
+      },
+      "action": {
+        "title": "采取行动",
+        "description": "跟随指导练习，与我们的 AI 助手聊天，或预约附近的合作诊所进行专业护理。"
+      }
+    }
+  },
+  "benefits": {
+    "title": "SpineScan 的优势",
+    "description": "我们的应用不仅提供诊断，更是您脊椎健康之旅的综合解决方案。",
+    "items": {
+      "nonInvasive": {
+        "title": "无创评估",
+        "description": "无需辐射或侵入性程序，在家中舒适地进行脊椎分析。"
+      },
+      "instant": {
+        "title": "即时结果",
+        "description": "立即获得分析和建议，无需等待传统诊断结果。"
+      },
+      "support": {
+        "title": "24/7 AI 支持",
+        "description": "随时访问我们的智能聊天机器人，咨询脊椎健康、姿势或推荐练习的问题。"
+      },
+      "personalized": {
+        "title": "个性化指导",
+        "description": "根据您独特的脊椎状况和具体健康问题获得定制建议。"
+      },
+      "tracking": {
+        "title": "进度追踪",
+        "description": "通过详细的进度报告和比较分析，监控随时间推移的改善情况。"
+      },
+      "detection": {
+        "title": "早期检测",
+        "description": "在脊椎问题变得严重之前识别潜在问题，实现主动护理。"
+      }
+    },
+    "network": {
+      "title": "专业临床网络",
+      "description": "与经过验证的脊椎专家联系，在需要时获得专业护理。",
+      "features": [
+        "经过验证的脊椎专家",
+        "直接预约",
+        "共享诊断数据",
+        "综合护理计划"
+      ]
+    }
+  },
+  "download": {
+    "title": "今天开始您的脊椎健康之旅",
+    "description": "立即下载 SpineScan，迈出理解和改善脊椎健康的第一步。我们的 AI 技术已准备好为您提供以前只能通过临床访问获得的见解。",
+    "appStore": {
+      "subtitle": "在",
+      "title": "App Store 下载"
+    },
+    "playStore": {
+      "subtitle": "在",
+      "title": "Google Play 获取"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "description": "查找关于SpineScan技术和功能的常见问题答案。",
+    "accuracy": {
+      "question": "脊椎扫描技术的准确度如何？",
+      "answer": "我们的AI驱动扫描技术经过临床验证，与专业评估相比，检测脊椎点的准确度高达97%。该技术已针对传统方法（如X光和专业体检）进行了测试，显示出极好的相关性。但需要注意的是，SpineScan设计为筛查和监测工具，而不是在临床需要时替代医学影像。"
+    },
+    "privacy": {
+      "question": "我的健康数据是否私密和安全？",
+      "answer": "当然。我们非常重视数据隐私。您的所有健康数据都经过端到端加密，并按照HIPAA规定安全存储。您的数据永远不会出售给第三方，您完全控制谁可以访问您的信息。您还可以随时通过应用设置选择删除您的数据。"
+    },
+    "languages": {
+      "question": "AI聊天机器人支持哪些语言？",
+      "answer": "目前，我们的AI聊天机器人支持英语、马来语和中文，提供文本和语音交互。我们正在不断努力添加更多语言，使脊椎健康信息能够被世界各地的人们访问。每个语言版本都经过专门的医学术语训练，以确保健康沟通的准确性。"
+    },
+    "scanFrequency": {
+      "question": "我应该多久扫描一次脊椎？",
+      "answer": "对于一般监测，我们建议每2-4周扫描一次。但是，如果您正在遵循特定的治疗计划或康复计划，您的医疗保健提供者可能会建议更频繁的扫描以跟踪进展。应用将根据您的个性化时间表发送温和提醒。"
+    },
+    "contact": {
+      "title": "还有问题？",
+      "description": "我们的支持团队随时准备帮助您解答关于SpineScan的任何问题。",
+      "button": "联系支持"
+    }
+  },
+  "chatbot": {
+    "title": "AI 助手",
+    "welcome": "你好！今天有什么我可以帮你的吗？",
+    "thinking": "思考中...",
+    "inputPlaceholder": "输入您的消息...",
+    "error": "抱歉，我遇到了一个错误。请再试一次。"
+  },
+  "footer": {
+    "description": "革命性的脊椎健康技术就在您的手中。通过AI驱动的洞察力，扫描、分析并改善您的脊椎健康。",
+    "explore": {
+      "title": "探索",
+      "features": "功能特点",
+      "howItWorks": "工作原理",
+      "benefits": "优势",
+      "faq": "常见问题"
+    },
+    "company": {
+      "title": "公司",
+      "about": "关于我们",
+      "press": "新闻媒体",
+      "privacy": "隐私政策",
+      "terms": "服务条款"
+    },
+    "contact": {
+      "title": "联系我们",
+      "email": "support@bluejay2.com",
+      "phone": "+607 1237465",
+      "download": "下载应用",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    },
+    "copyright": "版权所有。",
+    "links": {
+      "privacy": "隐私",
+      "terms": "条款",
+      "cookies": "Cookie"
+    }
+  }
+} 
