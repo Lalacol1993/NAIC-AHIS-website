@@ -6,7 +6,7 @@ const Hero = () => {
   const { t } = useTranslation();
   
   return (
-    <section className="pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+    <section id="hero" className="pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="w-full lg:w-1/2 lg:pr-8">

@@ -32,6 +32,14 @@ const Header = () => {
     setLanguageMenuOpen(false);
   };
 
+  const scrollToHero = () => {
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -42,9 +50,12 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+          <button
+            onClick={scrollToHero}
+            className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+          >
             BlueJay²
-          </span>
+          </button>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8 text-lg">
