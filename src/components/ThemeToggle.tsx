@@ -13,24 +13,20 @@ const ThemeToggle = () => {
     return false;
   });
 
-  // Apply theme immediately on mount
+  // Apply theme immediately on mount and when darkMode changes
   useEffect(() => {
+    const html = document.documentElement;
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      html.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      html.classList.remove('dark');
     }
-  }, []);
+  }, [darkMode]);
 
   useEffect(() => {
     // Function to update theme
     const updateTheme = (isDark: boolean) => {
       setDarkMode(isDark);
-      if (isDark) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
     };
 
     // Check for saved theme preference or use system preference
@@ -63,14 +59,7 @@ const ThemeToggle = () => {
   const toggleTheme = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
-    
-    if (newDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
+    localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
   };
 
   return (
