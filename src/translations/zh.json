@@ -134,7 +134,7 @@
   },
   "chatbot": {
     "title": "AI 助手",
-    "welcome": "你好！今天有什么我可以帮你的吗？",
+    "welcome": "你好！今天有什么可以帮到您的吗？",
     "thinking": "思考中...",
     "inputPlaceholder": "输入您的消息...",
     "error": "抱歉，我遇到了一个错误。请再试一次。"
