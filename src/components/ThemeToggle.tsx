@@ -4,39 +4,48 @@ const ThemeToggle = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
+    // Function to update theme
+    const updateTheme = (isDark: boolean) => {
+      setDarkMode(isDark);
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    };
+
     // Check for saved theme preference or use system preference
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    const isDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
-    setDarkMode(isDark);
-    
-    if (isDark) {
-      document.documentElement.classList.add('dark');
+    // If there's no saved preference, use system preference
+    if (!savedTheme) {
+      updateTheme(systemPrefersDark);
     } else {
-      document.documentElement.classList.remove('dark');
+      updateTheme(savedTheme === 'dark');
     }
 
     // Listen for system theme changes
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e: MediaQueryListEvent) => {
+      // Only update if user hasn't set a preference
       if (!localStorage.getItem('theme')) {
-        setDarkMode(e.matches);
-        if (e.matches) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
+        updateTheme(e.matches);
       }
     };
 
+    // Add event listener for system theme changes
     mediaQuery.addEventListener('change', handleChange);
+
+    // Cleanup
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    
+    if (newDarkMode) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     } else {
