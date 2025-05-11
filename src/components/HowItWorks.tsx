@@ -34,18 +34,18 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-16 md:py-24">
+    <section id="how-it-works" className="py-16 md:py-24 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('howItWorks.title')}</h2>
-          <p className="text-lg text-slate-700">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">{t('howItWorks.title')}</h2>
+          <p className="text-lg text-slate-700 dark:text-gray-300">
             {t('howItWorks.description')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
               <img 
                 src={steps.find(step => step.id === activeStep)?.image} 
                 alt={steps.find(step => step.id === activeStep)?.title} 
@@ -62,7 +62,7 @@ const HowItWorks = () => {
                   className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
                     activeStep === step.id 
                       ? 'bg-blue-800 text-white shadow-lg' 
-                      : 'bg-white hover:bg-blue-50 border border-gray-100'
+                      : 'bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-gray-700 border border-gray-100 dark:border-gray-700'
                   }`}
                   onClick={() => setActiveStep(step.id)}
                 >
@@ -70,14 +70,14 @@ const HowItWorks = () => {
                     <div className={`flex-shrink-0 rounded-full h-8 w-8 flex items-center justify-center text-sm font-bold ${
                       activeStep === step.id 
                         ? 'bg-white text-blue-800' 
-                        : 'bg-blue-100 text-blue-800'
+                        : 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
                     }`}>
                       {step.id}
                     </div>
                     
                     <div>
-                      <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                      <p className={activeStep === step.id ? 'text-blue-100' : 'text-slate-600'}>
+                      <h3 className="text-xl font-bold mb-2 dark:text-white">{step.title}</h3>
+                      <p className={activeStep === step.id ? 'text-blue-100' : 'text-slate-600 dark:text-gray-300'}>
                         {step.description}
                       </p>
                       

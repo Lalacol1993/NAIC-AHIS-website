@@ -5,13 +5,13 @@ import { useTranslation } from 'react-i18next';
 const BenefitItem = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
   <div className="flex items-start gap-4">
     <div className="flex-shrink-0 mt-1">
-      <div className="h-10 w-10 bg-teal-100 text-teal-700 rounded-lg flex items-center justify-center">
+      <div className="h-10 w-10 bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-200 rounded-lg flex items-center justify-center">
         {icon}
       </div>
     </div>
     <div>
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-slate-600">{description}</p>
+      <h3 className="text-lg font-semibold mb-2 dark:text-white">{title}</h3>
+      <p className="text-slate-600 dark:text-gray-300">{description}</p>
     </div>
   </div>
 );
@@ -20,11 +20,11 @@ const Benefits = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="benefits" className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white">
+    <section id="benefits" className="py-16 md:py-24 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('benefits.title')}</h2>
-          <p className="text-lg text-slate-700">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">{t('benefits.title')}</h2>
+          <p className="text-lg text-slate-700 dark:text-gray-300">
             {t('benefits.description')}
           </p>
         </div>
