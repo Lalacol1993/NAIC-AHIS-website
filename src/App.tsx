@@ -12,7 +12,6 @@ import FAQ from "./components/FAQ";
 import DownloadCTA from "./components/DownloadCTA";
 import Footer from "./components/Footer";
 import ThemeToggle from "./components/ThemeToggle";
-import BackToTop from "./components/BackToTop";
 import { useTranslation } from 'react-i18next';
 import './i18n';
 
@@ -29,7 +28,6 @@ const App = () => {
   const { t, i18n } = useTranslation();
   const chatBodyRef = useRef<HTMLDivElement>(null);
   const [showChatbot, setShowChatbot] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [chatHistory, setChatHistory] = useState<ChatHistory>([
     {
       hideInChat: true,
@@ -39,7 +37,6 @@ const App = () => {
   ]);
 
   const generateBotResponse = async (history: ChatHistory) => {
-    setIsLoading(true);
     const updateHistory = (text: string, isError = false) => {
       setChatHistory((prev: ChatHistory) => [
         ...prev.filter((msg: ChatMessage) => msg.text !== t('chatbot.thinking')),
@@ -68,8 +65,6 @@ const App = () => {
       updateHistory(apiResponseText);
     } catch (error: any) {
       updateHistory(error.message, true);
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -97,13 +92,10 @@ const App = () => {
         <ThemeToggle />
       </div>
 
-      {/* Back to Top Button */}
-      <BackToTop />
-
       {/* Chatbot Floating Button */}
       <button 
         onClick={() => setShowChatbot(!showChatbot)} 
-        className="fixed bottom-4 right-4 z-50 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-all duration-300 transform hover:scale-110"
+        className="fixed bottom-4 right-4 z-50 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors"
       >
         {showChatbot ? (
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -119,16 +111,13 @@ const App = () => {
 
       {/* Chatbot Popup */}
       {showChatbot && (
-        <div className="fixed bottom-20 right-4 w-[350px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden z-50 animate-slide-up">
+        <div className="fixed bottom-20 right-4 w-[350px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg rounded-xl overflow-hidden z-50">
           <div className="bg-primary-600 text-white px-4 py-3 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <ChatbotIcon />
               <h2 className="font-semibold">{t('chatbot.title')}</h2>
             </div>
-            <button 
-              onClick={() => setShowChatbot(false)} 
-              className="hover:bg-primary-700 rounded-full p-1 transition-colors duration-200"
-            >
+            <button onClick={() => setShowChatbot(false)} className="hover:bg-primary-700 rounded-full p-1">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 6L6 18"></path>
                 <path d="M6 6l12 12"></path>
@@ -144,12 +133,6 @@ const App = () => {
             {chatHistory.map((chat, index) => (
               <ChatMessage key={index} chat={chat} />
             ))}
-            {isLoading && (
-              <div className="message bot-message animate-pulse">
-                <ChatbotIcon />
-                <p className="message-text">{t('chatbot.thinking')}</p>
-              </div>
-            )}
           </div>
 
           <div className="chat-footer dark:bg-gray-800 dark:border-t dark:border-gray-700">
@@ -158,7 +141,6 @@ const App = () => {
               setChatHistory={setChatHistory} 
               generateBotResponse={generateBotResponse}
               placeholder={t('chatbot.inputPlaceholder')}
-              isLoading={isLoading}
             />
           </div>
         </div>
