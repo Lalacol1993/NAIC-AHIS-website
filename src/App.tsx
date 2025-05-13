@@ -11,6 +11,7 @@ import Benefits from "./components/Benefits";
 import FAQ from "./components/FAQ";
 import DownloadCTA from "./components/DownloadCTA";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 import { useTranslation } from 'react-i18next';
 import './i18n';
 
@@ -85,6 +86,7 @@ const App = () => {
         <DownloadCTA />
       </main>
       <Footer />
+      <BackToTop />
 
       {/* Chatbot Floating Button */}
       <button 
