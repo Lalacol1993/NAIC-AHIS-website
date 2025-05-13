@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, KeyboardEvent } from "react";
 import { useTranslation } from 'react-i18next';
 
 interface ChatMessage {
@@ -16,7 +16,7 @@ interface ChatFormProps {
 }
 
 const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholder }: ChatFormProps) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   const { t } = useTranslation();
 
   const handleFormSubmit = async (e: React.FormEvent) => {
@@ -28,6 +28,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
     // Clear input
     if (inputRef.current) {
       inputRef.current.value = "";
+      inputRef.current.style.height = 'auto';
     }
 
     // Update chat history with the user's message
@@ -47,14 +48,29 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
     }, 600);
   };
 
+  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleFormSubmit(e);
+    }
+  };
+
+  const handleInput = (e: React.FormEvent<HTMLTextAreaElement>) => {
+    const target = e.target as HTMLTextAreaElement;
+    target.style.height = 'auto';
+    target.style.height = `${Math.min(target.scrollHeight, 120)}px`;
+  };
+
   return (
     <form onSubmit={handleFormSubmit} className="flex items-center gap-2 p-3">
       <div className="flex-1 min-w-0">
-        <input
+        <textarea
           ref={inputRef}
-          type="text"
           placeholder={placeholder}
-          className="w-full px-4 py-2 pr-12 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+          className="w-full px-4 py-2 pr-12 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 resize-none overflow-hidden"
+          style={{ height: '40px' }}
+          onKeyDown={handleKeyDown}
+          onInput={handleInput}
           aria-label="Chat message"
         />
       </div>
