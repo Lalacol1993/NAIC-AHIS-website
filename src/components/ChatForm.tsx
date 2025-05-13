@@ -1,5 +1,4 @@
-import { useState, FormEvent } from "react";
-import { Send } from "lucide-react";
+import { useRef } from "react";
 import { useTranslation } from 'react-i18next';
 
 interface ChatMessage {
@@ -17,50 +16,57 @@ interface ChatFormProps {
 }
 
 const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholder }: ChatFormProps) => {
-  const [input, setInput] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
   const { t } = useTranslation();
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    const userMessage = inputRef.current?.value.trim();
+    
+    if (!userMessage) return;
+    
+    // Clear input
+    if (inputRef.current) {
+      inputRef.current.value = "";
+    }
 
-    const newHistory = [
-      ...chatHistory,
-      { role: "user", text: input },
-      { role: "model", text: t('chatbot.thinking') },
-    ];
+    // Update chat history with the user's message
+    const newUserMessage: ChatMessage = { role: "user", text: userMessage };
+    setChatHistory(history => [...history, newUserMessage]);
 
-    setChatHistory(newHistory);
-    setInput("");
-    await generateBotResponse(newHistory);
+    // Add thinking message after a short delay
+    setTimeout(() => {
+      setChatHistory(history => [...history, { role: "model", text: t('chatbot.thinking') }]);
+      
+      // Generate bot response
+      generateBotResponse([
+        ...chatHistory,
+        newUserMessage,
+        { role: "user", text: `Using the details provided above, please address this query: ${userMessage}` }
+      ]);
+    }, 600);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-end gap-2 p-3">
+    <form onSubmit={handleFormSubmit} className="flex items-center gap-2 p-3">
       <div className="flex-1 min-w-0">
-        <textarea
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+        <input
+          ref={inputRef}
+          type="text"
           placeholder={placeholder}
-          className="w-full px-4 py-2 pr-12 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 min-h-[40px] max-h-[120px]"
-          rows={1}
-          style={{ 
-            height: 'auto',
-            overflowY: 'auto'
-          }}
-          onInput={(e) => {
-            const target = e.target as HTMLTextAreaElement;
-            target.style.height = 'auto';
-            target.style.height = `${Math.min(target.scrollHeight, 120)}px`;
-          }}
+          className="w-full px-4 py-2 pr-12 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+          aria-label="Chat message"
         />
       </div>
-      <button
-        type="submit"
-        disabled={!input.trim()}
-        className="flex-shrink-0 bg-primary-600 text-white p-2 rounded-lg hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed h-[40px] w-[40px] flex items-center justify-center"
+      <button 
+        type="submit" 
+        className="flex-shrink-0 bg-primary-600 text-white p-2 rounded-lg hover:bg-primary-700 transition-colors h-[40px] w-[40px] flex items-center justify-center"
+        aria-label="Send message"
       >
-        <Send size={20} />
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
       </button>
     </form>
   );
