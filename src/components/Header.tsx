@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -113,21 +114,29 @@ const Header = () => {
                 </div>
               )}
             </div>
+
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
+            <button className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95 transform">
+              {t('nav.downloadApp')}
+            </button>
           </nav>
 
-          <button className="hidden md:block bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95 transform">
-            {t('nav.downloadApp')}
-          </button>
-
-          <button
-            className="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none transition-all duration-300 hover:scale-110 active:scale-95 transform"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
+            <button
+              className="text-gray-800 dark:text-gray-200 focus:outline-none transition-all duration-300 hover:scale-110 active:scale-95 transform"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-800 shadow-lg absolute top-full left-0 w-full animate-slideDown">
           <div className="container mx-auto px-4 py-3 flex flex-col space-y-4 text-lg">

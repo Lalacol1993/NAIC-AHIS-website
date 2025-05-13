@@ -11,7 +11,6 @@ import Benefits from "./components/Benefits";
 import FAQ from "./components/FAQ";
 import DownloadCTA from "./components/DownloadCTA";
 import Footer from "./components/Footer";
-import ThemeToggle from "./components/ThemeToggle";
 import { useTranslation } from 'react-i18next';
 import './i18n';
 
@@ -86,11 +85,6 @@ const App = () => {
         <DownloadCTA />
       </main>
       <Footer />
-
-      {/* Theme Toggle Button */}
-      <div className="fixed top-4 right-4 z-50">
-        <ThemeToggle />
-      </div>
 
       {/* Chatbot Floating Button */}
       <button 
