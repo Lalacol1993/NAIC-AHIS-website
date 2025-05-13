@@ -58,7 +58,7 @@ const Header = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 text-lg">
+          <nav className="hidden md:flex items-center space-x-4 text-lg">
             <button
               onClick={() => scrollToSection('features')}
               className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-all duration-300 relative group"
