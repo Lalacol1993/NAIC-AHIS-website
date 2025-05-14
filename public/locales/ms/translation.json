@@ -1,0 +1,7 @@
+{
+  "chatbot": {
+    "speechNotSupported": "Pengecaman pertuturan tidak disokong dalam pelayar anda",
+    "startListening": "Mulakan input suara",
+    "stopListening": "Hentikan input suara"
+  }
+} 

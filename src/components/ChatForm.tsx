@@ -1,4 +1,4 @@
-import { useRef, KeyboardEvent } from "react";
+import { useRef, KeyboardEvent, useState } from "react";
 import { useTranslation } from 'react-i18next';
 
 interface ChatMessage {
@@ -17,7 +17,8 @@ interface ChatFormProps {
 
 const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholder }: ChatFormProps) => {
   const inputRef = useRef<HTMLTextAreaElement>(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [isListening, setIsListening] = useState(false);
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -73,18 +74,90 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
     }
   };
 
+  const toggleSpeechRecognition = () => {
+    if (!('webkitSpeechRecognition' in window)) {
+      alert(t('chatbot.speechNotSupported'));
+      return;
+    }
+
+    const recognition = new (window as any).webkitSpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+
+    // Set language based on current i18n language
+    const languageMap: { [key: string]: string } = {
+      'en': 'en-US',
+      'zh': 'zh-CN',
+      'ms': 'ms-MY'
+    };
+    recognition.lang = languageMap[i18n.language] || 'en-US';
+
+    if (!isListening) {
+      recognition.start();
+      setIsListening(true);
+
+      recognition.onresult = (event: any) => {
+        const transcript = event.results[0][0].transcript;
+        if (inputRef.current) {
+          inputRef.current.value = transcript;
+          // Trigger input event to adjust height
+          const inputEvent = new Event('input', { bubbles: true });
+          inputRef.current.dispatchEvent(inputEvent);
+        }
+      };
+
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+
+      recognition.onerror = (event: any) => {
+        console.error('Speech recognition error:', event.error);
+        setIsListening(false);
+      };
+    } else {
+      recognition.stop();
+      setIsListening(false);
+    }
+  };
+
   return (
     <form onSubmit={handleFormSubmit} className="flex items-center gap-2 p-3">
-      <div className="flex-1 min-w-0">
+      <div className="flex-1 min-w-0 relative">
         <textarea
           ref={inputRef}
           placeholder={placeholder}
-          className="w-full px-4 py-2 pr-12 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 resize-none overflow-hidden"
+          className="w-full px-4 py-2 pr-24 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 resize-none overflow-hidden"
           style={{ height: '40px' }}
           onKeyDown={handleKeyDown}
           onInput={handleInput}
           aria-label="Chat message"
         />
+        <button
+          type="button"
+          onClick={toggleSpeechRecognition}
+          className={`absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-lg transition-colors ${
+            isListening 
+              ? 'bg-red-500 hover:bg-red-600' 
+              : 'bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500'
+          }`}
+          aria-label={isListening ? t('chatbot.stopListening') : t('chatbot.startListening')}
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          >
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="22"/>
+          </svg>
+        </button>
       </div>
       <button 
         type="submit" 

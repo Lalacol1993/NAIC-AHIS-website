@@ -1,0 +1,7 @@
+{
+  "chatbot": {
+    "speechNotSupported": "您的浏览器不支持语音识别",
+    "startListening": "开始语音输入",
+    "stopListening": "停止语音输入"
+  }
+} 
