@@ -135,10 +135,10 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
         <button
           type="button"
           onClick={toggleSpeechRecognition}
-          className={`absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-lg transition-colors ${
+          className={`absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full transition-all duration-300 ${
             isListening 
-              ? 'bg-red-500 hover:bg-red-600' 
-              : 'bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500'
+              ? 'bg-red-500 hover:bg-red-600 scale-110 shadow-lg shadow-red-500/30' 
+              : 'bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 hover:scale-105'
           }`}
           aria-label={isListening ? t('chatbot.stopListening') : t('chatbot.startListening')}
         >
@@ -152,6 +152,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
             strokeWidth="2" 
             strokeLinecap="round" 
             strokeLinejoin="round"
+            className={`transition-transform duration-300 ${isListening ? 'animate-pulse' : ''}`}
           >
             <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
             <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
