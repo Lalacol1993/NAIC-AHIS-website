@@ -87,7 +87,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
     // Set language based on current i18n language
     const languageMap: { [key: string]: string } = {
       'en': 'en-US',
-      'zh': 'zh-CN',
+      'zh': 'zh-HK',
       'ms': 'ms-MY'
     };
     recognition.lang = languageMap[i18n.language] || 'en-US';
@@ -113,6 +113,14 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
       recognition.onerror = (event: any) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
+        // Show error message to user
+        if (event.error === 'not-allowed') {
+          alert(t('chatbot.microphonePermission'));
+        } else if (event.error === 'no-speech') {
+          alert(t('chatbot.noSpeechDetected'));
+        } else {
+          alert(t('chatbot.speechError'));
+        }
       };
     } else {
       recognition.stop();

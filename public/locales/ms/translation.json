@@ -2,6 +2,9 @@
   "chatbot": {
     "speechNotSupported": "Pengecaman pertuturan tidak disokong dalam pelayar anda",
     "startListening": "Mulakan input suara",
-    "stopListening": "Hentikan input suara"
+    "stopListening": "Hentikan input suara",
+    "microphonePermission": "Sila benarkan akses mikrofon untuk menggunakan pengecaman pertuturan",
+    "noSpeechDetected": "Tiada pertuturan dikesan. Sila cuba lagi",
+    "speechError": "Ralat berlaku dengan pengecaman pertuturan. Sila cuba lagi"
   }
 } 
