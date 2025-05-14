@@ -2,6 +2,9 @@
   "chatbot": {
     "speechNotSupported": "Speech recognition is not supported in your browser",
     "startListening": "Start voice input",
-    "stopListening": "Stop voice input"
+    "stopListening": "Stop voice input",
+    "microphonePermission": "Please allow microphone access to use speech recognition",
+    "noSpeechDetected": "No speech was detected. Please try again",
+    "speechError": "An error occurred with speech recognition. Please try again"
   }
 } 
