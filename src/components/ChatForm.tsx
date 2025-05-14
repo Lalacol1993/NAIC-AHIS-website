@@ -101,6 +101,10 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
         const transcript = event.results[0][0].transcript;
         setIsProcessing(true);
         
+        // Stop recognition immediately after getting the result
+        recognition.stop();
+        setIsListening(false);
+        
         // Add a small delay to show the loading animation
         setTimeout(() => {
           if (inputRef.current) {
@@ -114,7 +118,10 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
       };
 
       recognition.onend = () => {
-        setIsListening(false);
+        // Only reset listening state if we're not processing
+        if (!isProcessing) {
+          setIsListening(false);
+        }
       };
 
       recognition.onerror = (event: any) => {
