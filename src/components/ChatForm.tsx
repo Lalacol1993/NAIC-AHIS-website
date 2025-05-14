@@ -29,7 +29,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
     // Clear input
     if (inputRef.current) {
       inputRef.current.value = "";
-      inputRef.current.style.height = '40px';
+      inputRef.current.style.height = '80px';
     }
 
     // Update chat history with the user's message
@@ -59,7 +59,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
   const handleInput = (e: React.FormEvent<HTMLTextAreaElement>) => {
     const target = e.target as HTMLTextAreaElement;
     const lineHeight = parseInt(getComputedStyle(target).lineHeight);
-    const minHeight = 40;
+    const minHeight = 80;
     const maxHeight = 120;
     
     // Reset height to auto to get the correct scrollHeight
@@ -127,7 +127,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse, placeholde
           ref={inputRef}
           placeholder={placeholder}
           className="w-full px-4 py-2 pr-24 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 resize-none overflow-hidden"
-          style={{ height: '40px' }}
+          style={{ height: '80px' }}
           onKeyDown={handleKeyDown}
           onInput={handleInput}
           aria-label="Chat message"
