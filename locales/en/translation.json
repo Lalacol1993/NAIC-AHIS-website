@@ -1,0 +1,7 @@
+{
+  "chatbot": {
+    "speechNotSupported": "Speech recognition is not supported in your browser",
+    "startListening": "Start voice input",
+    "stopListening": "Stop voice input"
+  }
+} 
