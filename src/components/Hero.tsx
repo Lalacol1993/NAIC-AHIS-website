@@ -38,7 +38,7 @@ const Hero = () => {
             <div className="bg-gradient-to-br from-blue-800/20 to-teal-600/20 rounded-3xl p-3 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
               <div className="relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md">
                 <img 
-                  src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Scan%20Result.png" 
+                  src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/2D%20Scan%20White.png" 
                   alt="SpineScan App" 
                   className="w-full h-auto" 
                 />
