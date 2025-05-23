@@ -87,7 +87,7 @@ const Benefits = () => {
             </div>
             <div className="h-full">
               <img 
-                src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Placeholder.png" 
+                src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Bluejay%20X%20Redcrescent.png" 
                 alt="Professional healthcare" 
                 className="w-full h-full object-cover"
               />
