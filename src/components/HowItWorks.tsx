@@ -11,19 +11,19 @@ const HowItWorks = () => {
       id: 1,
       title: t('howItWorks.steps.scan.title'),
       description: t('howItWorks.steps.scan.description'),
-      image: "blob:https://onedrive.live.com/b42859ba-d1a7-4f84-9552-650039a054c5"
+      image: "https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Lidarmodel.png"
     },
     {
       id: 2,
       title: t('howItWorks.steps.analysis.title'),
       description: t('howItWorks.steps.analysis.description'),
-      image: "https://images.pexels.com/photos/8438922/pexels-photo-8438922.jpeg"
+      image: "https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Spineoutput.png"
     },
     {
       id: 3,
       title: t('howItWorks.steps.results.title'),
       description: t('howItWorks.steps.results.description'),
-      image: "https://images.pexels.com/photos/6497109/pexels-photo-6497109.jpeg"
+      image: "https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Doctor%20Report.png"
     },
     {
       id: 4,
