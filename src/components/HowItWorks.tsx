@@ -11,7 +11,7 @@ const HowItWorks = () => {
       id: 1,
       title: t('howItWorks.steps.scan.title'),
       description: t('howItWorks.steps.scan.description'),
-      image: "https://images.pexels.com/photos/5473182/pexels-photo-5473182.jpeg"
+      image: "https://drive.usercontent.google.com/u/0/uc?id=1J7gboXtQ-OT0tFe4Yt1InlqIOfazqyDT&export=download"
     },
     {
       id: 2,
