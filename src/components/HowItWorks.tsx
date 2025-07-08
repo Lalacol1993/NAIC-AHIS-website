@@ -23,7 +23,7 @@ const HowItWorks = () => {
       id: 3,
       title: t('howItWorks.steps.results.title'),
       description: t('howItWorks.steps.results.description'),
-      image: "https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Doctor%20Report.png"
+      image: "https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Selection.png"
     },
     {
       id: 4,
