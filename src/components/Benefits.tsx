@@ -85,11 +85,11 @@ const Benefits = () => {
                 ))}
               </ul>
             </div>
-            <div className="h-full">
+            <div className="h-full flex items-center justify-center p-6">
               <img 
                 src="https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Bluejay%20X%20Redcrescent.png" 
                 alt="Professional healthcare" 
-                className="w-full h-full object-cover"
+                className="max-w-xs w-full h-auto object-contain mx-auto"
               />
             </div>
           </div>
