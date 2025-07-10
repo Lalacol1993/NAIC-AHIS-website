@@ -44,24 +44,36 @@ const App = () => {
       ]);
     };
 
-    const formattedHistory = history.map(({ role, text }) => ({ role, parts: [{ text }] }));
+    // Format history for OpenRouter (role/content)
+    const formattedHistory = history.map(({ role, text }) => ({ role, content: text }));
+
+    const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY as string;
+    const model = import.meta.env.VITE_OPENROUTER_MODEL as string || "openai/gpt-4o";
 
     const requestOptions = {
       method: "POST",
-      headers: { 
+      headers: {
         "Content-Type": "application/json",
-        "Accept-Language": i18n.language
+        "Authorization": `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({ 
-        contents: formattedHistory
+      body: JSON.stringify({
+        model,
+        messages: formattedHistory,
       }),
     };
 
+    // Debug: log the request being sent to OpenRouter
+    console.log("OpenRouter request:", {
+      url: "https://openrouter.ai/api/v1/chat/completions",
+      headers: requestOptions.headers,
+      body: JSON.parse(requestOptions.body as string)
+    });
+
     try {
-      const response = await fetch(import.meta.env.VITE_API_URL as string, requestOptions);
+      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", requestOptions);
       const data = await response.json();
-      if (!response.ok) throw new Error(data?.error.message || t('chatbot.error'));
-      const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
+      if (!response.ok) throw new Error(data?.error?.message || t('chatbot.error'));
+      const apiResponseText = data.choices?.[0]?.message?.content?.trim() || t('chatbot.error');
       updateHistory(apiResponseText);
     } catch (error: any) {
       updateHistory(error.message, true);
