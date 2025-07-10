@@ -47,38 +47,38 @@ const App = () => {
     // Format history for OpenRouter (role/content)
     const formattedHistory = history.map(({ role, text }) => ({ role, content: text }));
 
+    // Read from environment variables
     const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY as string;
     const model = import.meta.env.VITE_OPENROUTER_MODEL as string || "openai/gpt-4o";
-    const referer = import.meta.env.VITE_OPENROUTER_REFERER as string || "https://bluejay2test.netlify.app";
+    const referer = import.meta.env.VITE_OPENROUTER_REFERER as string || window.location.origin;
+    const xTitle = import.meta.env.VITE_OPENROUTER_X_TITLE as string || "SpineScan";
+
+    // Enhanced debug output
+    console.log("OpenRouter request:", {
+      url: "https://openrouter.ai/api/v1/chat/completions",
+      headers: {
+        "Authorization": apiKey ? `Bearer ${apiKey.slice(0, 5)}...` : undefined,
+        "HTTP-Referer": referer,
+        "X-Title": xTitle,
+        "Content-Type": "application/json"
+      },
+      body: { model, messages: formattedHistory },
+      env: { apiKeyPresent: !!apiKey, model, referer, xTitle }
+    });
 
     const requestOptions = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${apiKey}`,
-        "HTTP-Referer": referer, // Now configurable
-        "X-Title": "SpineScan"
+        "HTTP-Referer": referer,
+        "X-Title": xTitle
       },
       body: JSON.stringify({
         model,
         messages: formattedHistory,
       }),
     };
-
-    // Enhanced debug output
-    console.log("OpenRouter request:", {
-      url: "https://openrouter.ai/api/v1/chat/completions",
-      headers: {
-        ...requestOptions.headers,
-        Authorization: apiKey ? `Bearer ${apiKey.slice(0, 5)}...` : undefined // Mask key
-      },
-      body: JSON.parse(requestOptions.body as string),
-      env: {
-        apiKeyPresent: !!apiKey,
-        model,
-        referer
-      }
-    });
 
     try {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", requestOptions);
