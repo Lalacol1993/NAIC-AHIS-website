@@ -49,14 +49,15 @@ const App = () => {
 
     const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY as string;
     const model = import.meta.env.VITE_OPENROUTER_MODEL as string || "openai/gpt-4o";
+    const referer = import.meta.env.VITE_OPENROUTER_REFERER as string || "https://bluejay2test.netlify.app";
 
     const requestOptions = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${apiKey}`,
-        "HTTP-Referer": "https://bluejay2test.netlify.app", // <-- Replace with your deployed site URL
-        "X-Title": "SpineScan" // <-- Or your app/site name
+        "HTTP-Referer": referer, // Now configurable
+        "X-Title": "SpineScan"
       },
       body: JSON.stringify({
         model,
@@ -64,11 +65,19 @@ const App = () => {
       }),
     };
 
-    // Debug: log the request being sent to OpenRouter
+    // Enhanced debug output
     console.log("OpenRouter request:", {
       url: "https://openrouter.ai/api/v1/chat/completions",
-      headers: requestOptions.headers,
-      body: JSON.parse(requestOptions.body as string)
+      headers: {
+        ...requestOptions.headers,
+        Authorization: apiKey ? `Bearer ${apiKey.slice(0, 5)}...` : undefined // Mask key
+      },
+      body: JSON.parse(requestOptions.body as string),
+      env: {
+        apiKeyPresent: !!apiKey,
+        model,
+        referer
+      }
     });
 
     try {
