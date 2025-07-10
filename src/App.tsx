@@ -55,6 +55,8 @@ const App = () => {
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${apiKey}`,
+        "HTTP-Referer": "https://yourdomain.com", // <-- Replace with your deployed site URL
+        "X-Title": "SpineScan" // <-- Or your app/site name
       },
       body: JSON.stringify({
         model,
