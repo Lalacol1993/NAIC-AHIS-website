@@ -41,7 +41,7 @@ const DownloadCTA = () => {
                 </button>
                 
                 <button className="bg-white text-blue-900 hover:bg-blue-50 font-medium py-3 px-6 rounded-xl transition-colors flex items-center justify-center gap-2">
-                  <img src={playstoreIcon} alt="Google Play" className="w-6 aspect-auto" />
+                  <img src={playstoreIcon} alt="Google Play" className="w-8 aspect-auto" />
                   <div className="text-left">
                     <div className="text-xs">{t('download.playStore.subtitle')}</div>
                     <div className="font-semibold">{t('download.playStore.title')}</div>
