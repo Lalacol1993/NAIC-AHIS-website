@@ -29,7 +29,7 @@ const HowItWorks = () => {
       id: 4,
       title: t('howItWorks.steps.action.title'),
       description: t('howItWorks.steps.action.description'),
-      image: "https://images.pexels.com/photos/8942991/pexels-photo-8942991.jpeg"
+      image: "https://raw.githubusercontent.com/Lalacol1993/NAIC-AHIS-website/refs/heads/main/img/Take%20Action.png"
     }
   ];
 
