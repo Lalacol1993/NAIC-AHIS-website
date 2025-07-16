@@ -31,7 +31,7 @@ const DownloadCTA = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button className="bg-white text-blue-900 hover:bg-blue-50 font-medium py-3 px-6 rounded-xl transition-colors flex items-center justify-center gap-2">
-                  <img src={appstoreIcon} alt="App Store" className="w-6 h-6" />
+                  <img src={appstoreIcon} alt="App Store" className="w-6 aspect-auto" />
                   <div className="text-left">
                     <div className="text-xs">{t('download.appStore.subtitle')}</div>
                     <div className="font-semibold">{t('download.appStore.title')}</div>
