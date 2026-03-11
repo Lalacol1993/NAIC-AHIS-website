@@ -80,7 +80,7 @@ const Header = () => {
               {t('nav.benefits')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 dark:bg-primary-400 group-hover:w-full transition-all duration-300"></span>
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('faq')}
               className="font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-all duration-300 relative group"
             >
@@ -91,47 +91,47 @@ const Header = () => {
             <div className="relative">
               <button
                 className="flex items-center space-x-1 font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-400 transition-all duration-300 hover:scale-105 active:scale-95 transform"
-              onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
-            >
+                onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
+              >
                 <Globe size={20} className="transition-transform duration-300 group-hover:rotate-12" />
-              <span>{languages.find(lang => lang.code === i18n.language)?.name || 'English'}</span>
+                <span>{languages.find(lang => lang.code === i18n.language)?.name || 'English'}</span>
                 <ChevronDown size={16} className={`transition-transform duration-300 ${languageMenuOpen ? 'rotate-180' : ''}`} />
-            </button>
-            
-            {languageMenuOpen && (
+              </button>
+              
+              {languageMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg py-1 z-50 animate-fadeIn">
-                {languages.map((language) => (
-                  <button
-                    key={language.code}
+                  {languages.map((language) => (
+                    <button
+                      key={language.code}
                       className={`block w-full text-left px-4 py-2 hover:bg-primary-50 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-200 hover:translate-x-1 transform ${
                         language.code === i18n.language ? 'text-primary-700 dark:text-primary-400 font-medium' : ''
-                    }`}
-                    onClick={() => changeLanguage(language.code)}
-                  >
-                    {language.name}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+                      }`}
+                      onClick={() => changeLanguage(language.code)}
+                    >
+                      {language.name}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Theme Toggle */}
             <ThemeToggle />
 
             <button className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95 transform">
-          {t('nav.downloadApp')}
-        </button>
+              {t('nav.downloadApp')}
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
             <ThemeToggle />
-        <button
+            <button
               className="text-gray-800 dark:text-gray-200 focus:outline-none transition-all duration-300 hover:scale-110 active:scale-95 transform"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </div>
