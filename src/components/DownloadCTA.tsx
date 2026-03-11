@@ -3,8 +3,6 @@ import { AppleIcon, MessageSquare } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 // @ts-ignore
 import appstoreIcon from '../../img/appstore.png';
-// @ts-ignore
-import playstoreIcon from '../../img/Google Play.png';
 
 const PlayStoreIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -41,7 +39,7 @@ const DownloadCTA = () => {
                 </button>
                 
                 <button className="bg-white text-blue-900 hover:bg-blue-50 font-medium py-3 px-6 rounded-xl transition-colors flex items-center justify-center gap-2">
-                  <img src={playstoreIcon} alt="Google Play" className="w-8 aspect-auto" />
+                  <PlayStoreIcon size={22} />
                   <div className="text-left">
                     <div className="text-xs">{t('download.playStore.subtitle')}</div>
                     <div className="font-semibold">{t('download.playStore.title')}</div>
