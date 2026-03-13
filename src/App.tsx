@@ -37,6 +37,9 @@ const App = () => {
   ]);
 
   const generateBotResponse = async (history: ChatHistory) => {
+    const apiUrl = import.meta.env.VITE_API_URL as string;
+    const apiKey = import.meta.env.VITE_API_KEY as string;
+
     const updateHistory = (text: string, isError = false) => {
       setChatHistory((prev: ChatHistory) => [
         ...prev.filter((msg: ChatMessage) => msg.text !== t('chatbot.thinking')),
@@ -58,7 +61,8 @@ const App = () => {
     };
 
     try {
-      const response = await fetch(import.meta.env.VITE_API_URL as string, requestOptions);
+      const url = `${apiUrl}?key=${apiKey}`;
+      const response = await fetch(url, requestOptions);
       const data = await response.json();
       if (!response.ok) throw new Error(data?.error.message || t('chatbot.error'));
       const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
